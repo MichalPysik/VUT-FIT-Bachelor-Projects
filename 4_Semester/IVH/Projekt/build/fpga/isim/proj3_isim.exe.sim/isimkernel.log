@@ -1,0 +1,29 @@
+Command line:
+   proj3_isim.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1126
+
+Thu Apr 22 16:52:08 2021
+
+
+ Elaboration Time: 0.070101 sec
+
+ Current Memory Usage: 461.238 Meg
+
+ Total Signals          : 1649
+ Total Nets             : 955
+ Total Signal Drivers   : 452
+ Total Blocks           : 304
+ Total Primitive Blocks : 152
+ Total Processes        : 373
+ Total Traceable Variables  : 319
+ Total Scalar Nets and Variables : 6978
+Total Line Count : 1724
+
+ Total Simulation Time: 294.423 sec
+
+ Current Memory Usage: 303.952 Meg
+
+Thu Apr 22 17:26:11 2021
+

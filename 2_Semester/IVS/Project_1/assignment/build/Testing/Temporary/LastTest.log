@@ -1,0 +1,867 @@
+Start testing: Feb 25 21:19 CET
+----------------------------------------------------------
+1/32 Testing: EmptyTree.InsertNode
+1/32 Test: EmptyTree.InsertNode
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=EmptyTree.InsertNode"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"EmptyTree.InsertNode" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = EmptyTree.InsertNode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EmptyTree
+[ RUN      ] EmptyTree.InsertNode
+[       OK ] EmptyTree.InsertNode (0 ms)
+[----------] 1 test from EmptyTree (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EmptyTree.InsertNode" end time: Feb 25 21:19 CET
+"EmptyTree.InsertNode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/32 Testing: NonEmptyTree.InsertNode
+2/32 Test: NonEmptyTree.InsertNode
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=NonEmptyTree.InsertNode"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"NonEmptyTree.InsertNode" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = NonEmptyTree.InsertNode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NonEmptyTree
+[ RUN      ] NonEmptyTree.InsertNode
+[       OK ] NonEmptyTree.InsertNode (0 ms)
+[----------] 1 test from NonEmptyTree (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NonEmptyTree.InsertNode" end time: Feb 25 21:19 CET
+"NonEmptyTree.InsertNode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/32 Testing: EmptyTree.DeleteNode
+3/32 Test: EmptyTree.DeleteNode
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=EmptyTree.DeleteNode"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"EmptyTree.DeleteNode" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = EmptyTree.DeleteNode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EmptyTree
+[ RUN      ] EmptyTree.DeleteNode
+[       OK ] EmptyTree.DeleteNode (0 ms)
+[----------] 1 test from EmptyTree (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EmptyTree.DeleteNode" end time: Feb 25 21:19 CET
+"EmptyTree.DeleteNode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/32 Testing: NonEmptyTree.DeleteNode
+4/32 Test: NonEmptyTree.DeleteNode
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=NonEmptyTree.DeleteNode"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"NonEmptyTree.DeleteNode" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = NonEmptyTree.DeleteNode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NonEmptyTree
+[ RUN      ] NonEmptyTree.DeleteNode
+[       OK ] NonEmptyTree.DeleteNode (0 ms)
+[----------] 1 test from NonEmptyTree (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NonEmptyTree.DeleteNode" end time: Feb 25 21:19 CET
+"NonEmptyTree.DeleteNode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/32 Testing: EmptyTree.FindNode
+5/32 Test: EmptyTree.FindNode
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=EmptyTree.FindNode"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"EmptyTree.FindNode" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = EmptyTree.FindNode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EmptyTree
+[ RUN      ] EmptyTree.FindNode
+[       OK ] EmptyTree.FindNode (0 ms)
+[----------] 1 test from EmptyTree (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"EmptyTree.FindNode" end time: Feb 25 21:19 CET
+"EmptyTree.FindNode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/32 Testing: NonEmptyTree.FindNode
+6/32 Test: NonEmptyTree.FindNode
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=NonEmptyTree.FindNode"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"NonEmptyTree.FindNode" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = NonEmptyTree.FindNode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NonEmptyTree
+[ RUN      ] NonEmptyTree.FindNode
+[       OK ] NonEmptyTree.FindNode (0 ms)
+[----------] 1 test from NonEmptyTree (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NonEmptyTree.FindNode" end time: Feb 25 21:19 CET
+"NonEmptyTree.FindNode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/32 Testing: TreeAxioms.Axiom1
+7/32 Test: TreeAxioms.Axiom1
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=TreeAxioms.Axiom1"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"TreeAxioms.Axiom1" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = TreeAxioms.Axiom1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TreeAxioms
+[ RUN      ] TreeAxioms.Axiom1
+[       OK ] TreeAxioms.Axiom1 (0 ms)
+[----------] 1 test from TreeAxioms (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TreeAxioms.Axiom1" end time: Feb 25 21:19 CET
+"TreeAxioms.Axiom1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/32 Testing: TreeAxioms.Axiom2
+8/32 Test: TreeAxioms.Axiom2
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=TreeAxioms.Axiom2"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"TreeAxioms.Axiom2" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = TreeAxioms.Axiom2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TreeAxioms
+[ RUN      ] TreeAxioms.Axiom2
+[       OK ] TreeAxioms.Axiom2 (0 ms)
+[----------] 1 test from TreeAxioms (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TreeAxioms.Axiom2" end time: Feb 25 21:19 CET
+"TreeAxioms.Axiom2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/32 Testing: TreeAxioms.Axiom3
+9/32 Test: TreeAxioms.Axiom3
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/black_box_test" "--gtest_filter=TreeAxioms.Axiom3"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"TreeAxioms.Axiom3" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = TreeAxioms.Axiom3
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TreeAxioms
+[ RUN      ] TreeAxioms.Axiom3
+[       OK ] TreeAxioms.Axiom3 (0 ms)
+[----------] 1 test from TreeAxioms (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TreeAxioms.Axiom3" end time: Feb 25 21:19 CET
+"TreeAxioms.Axiom3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/32 Testing: Matrix_1x1.constructor
+10/32 Test: Matrix_1x1.constructor
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_1x1.constructor"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_1x1.constructor" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_1x1.constructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_1x1
+[ RUN      ] Matrix_1x1.constructor
+[       OK ] Matrix_1x1.constructor (0 ms)
+[----------] 1 test from Matrix_1x1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_1x1.constructor" end time: Feb 25 21:19 CET
+"Matrix_1x1.constructor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/32 Testing: Matrix_5x5.constructor
+11/32 Test: Matrix_5x5.constructor
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_5x5.constructor"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_5x5.constructor" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_5x5.constructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_5x5
+[ RUN      ] Matrix_5x5.constructor
+[       OK ] Matrix_5x5.constructor (0 ms)
+[----------] 1 test from Matrix_5x5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_5x5.constructor" end time: Feb 25 21:19 CET
+"Matrix_5x5.constructor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/32 Testing: Matrix_1x1.set
+12/32 Test: Matrix_1x1.set
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_1x1.set"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_1x1.set" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_1x1.set
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_1x1
+[ RUN      ] Matrix_1x1.set
+[       OK ] Matrix_1x1.set (0 ms)
+[----------] 1 test from Matrix_1x1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_1x1.set" end time: Feb 25 21:19 CET
+"Matrix_1x1.set" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/32 Testing: Matrix_5x5.set
+13/32 Test: Matrix_5x5.set
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_5x5.set"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_5x5.set" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_5x5.set
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_5x5
+[ RUN      ] Matrix_5x5.set
+[       OK ] Matrix_5x5.set (0 ms)
+[----------] 1 test from Matrix_5x5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_5x5.set" end time: Feb 25 21:19 CET
+"Matrix_5x5.set" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/32 Testing: Matrix_1x1.get
+14/32 Test: Matrix_1x1.get
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_1x1.get"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_1x1.get" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_1x1.get
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_1x1
+[ RUN      ] Matrix_1x1.get
+[       OK ] Matrix_1x1.get (0 ms)
+[----------] 1 test from Matrix_1x1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_1x1.get" end time: Feb 25 21:19 CET
+"Matrix_1x1.get" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/32 Testing: Matrix_5x5.get
+15/32 Test: Matrix_5x5.get
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_5x5.get"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_5x5.get" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_5x5.get
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_5x5
+[ RUN      ] Matrix_5x5.get
+[       OK ] Matrix_5x5.get (0 ms)
+[----------] 1 test from Matrix_5x5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_5x5.get" end time: Feb 25 21:19 CET
+"Matrix_5x5.get" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/32 Testing: Matrix_1x1.Equality
+16/32 Test: Matrix_1x1.Equality
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_1x1.Equality"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_1x1.Equality" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_1x1.Equality
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_1x1
+[ RUN      ] Matrix_1x1.Equality
+[       OK ] Matrix_1x1.Equality (0 ms)
+[----------] 1 test from Matrix_1x1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_1x1.Equality" end time: Feb 25 21:19 CET
+"Matrix_1x1.Equality" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/32 Testing: Matrix_5x5.Equality
+17/32 Test: Matrix_5x5.Equality
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_5x5.Equality"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_5x5.Equality" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_5x5.Equality
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_5x5
+[ RUN      ] Matrix_5x5.Equality
+[       OK ] Matrix_5x5.Equality (0 ms)
+[----------] 1 test from Matrix_5x5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_5x5.Equality" end time: Feb 25 21:19 CET
+"Matrix_5x5.Equality" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/32 Testing: Matrix_1x1.Addition
+18/32 Test: Matrix_1x1.Addition
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_1x1.Addition"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_1x1.Addition" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_1x1.Addition
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_1x1
+[ RUN      ] Matrix_1x1.Addition
+[       OK ] Matrix_1x1.Addition (0 ms)
+[----------] 1 test from Matrix_1x1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_1x1.Addition" end time: Feb 25 21:19 CET
+"Matrix_1x1.Addition" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/32 Testing: Matrix_5x5.Addition
+19/32 Test: Matrix_5x5.Addition
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_5x5.Addition"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_5x5.Addition" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_5x5.Addition
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_5x5
+[ RUN      ] Matrix_5x5.Addition
+[       OK ] Matrix_5x5.Addition (0 ms)
+[----------] 1 test from Matrix_5x5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_5x5.Addition" end time: Feb 25 21:19 CET
+"Matrix_5x5.Addition" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/32 Testing: Matrix_1x1.Multiplication_by_matrix
+20/32 Test: Matrix_1x1.Multiplication_by_matrix
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_1x1.Multiplication_by_matrix"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_1x1.Multiplication_by_matrix" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_1x1.Multiplication_by_matrix
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_1x1
+[ RUN      ] Matrix_1x1.Multiplication_by_matrix
+[       OK ] Matrix_1x1.Multiplication_by_matrix (0 ms)
+[----------] 1 test from Matrix_1x1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_1x1.Multiplication_by_matrix" end time: Feb 25 21:19 CET
+"Matrix_1x1.Multiplication_by_matrix" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/32 Testing: Matrix_5x5.Multiplication_by_matrix
+21/32 Test: Matrix_5x5.Multiplication_by_matrix
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_5x5.Multiplication_by_matrix"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_5x5.Multiplication_by_matrix" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_5x5.Multiplication_by_matrix
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_5x5
+[ RUN      ] Matrix_5x5.Multiplication_by_matrix
+[       OK ] Matrix_5x5.Multiplication_by_matrix (0 ms)
+[----------] 1 test from Matrix_5x5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_5x5.Multiplication_by_matrix" end time: Feb 25 21:19 CET
+"Matrix_5x5.Multiplication_by_matrix" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/32 Testing: Matrix_1x1.Multiplication_by_scalar
+22/32 Test: Matrix_1x1.Multiplication_by_scalar
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_1x1.Multiplication_by_scalar"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_1x1.Multiplication_by_scalar" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_1x1.Multiplication_by_scalar
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_1x1
+[ RUN      ] Matrix_1x1.Multiplication_by_scalar
+[       OK ] Matrix_1x1.Multiplication_by_scalar (0 ms)
+[----------] 1 test from Matrix_1x1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_1x1.Multiplication_by_scalar" end time: Feb 25 21:19 CET
+"Matrix_1x1.Multiplication_by_scalar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/32 Testing: Matrix_5x5.Multiplication_by_scalar
+23/32 Test: Matrix_5x5.Multiplication_by_scalar
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_5x5.Multiplication_by_scalar"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_5x5.Multiplication_by_scalar" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_5x5.Multiplication_by_scalar
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_5x5
+[ RUN      ] Matrix_5x5.Multiplication_by_scalar
+[       OK ] Matrix_5x5.Multiplication_by_scalar (0 ms)
+[----------] 1 test from Matrix_5x5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_5x5.Multiplication_by_scalar" end time: Feb 25 21:19 CET
+"Matrix_5x5.Multiplication_by_scalar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/32 Testing: Matrix_1x1.solveEquation
+24/32 Test: Matrix_1x1.solveEquation
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_1x1.solveEquation"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_1x1.solveEquation" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_1x1.solveEquation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_1x1
+[ RUN      ] Matrix_1x1.solveEquation
+[       OK ] Matrix_1x1.solveEquation (0 ms)
+[----------] 1 test from Matrix_1x1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_1x1.solveEquation" end time: Feb 25 21:19 CET
+"Matrix_1x1.solveEquation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/32 Testing: Matrix_5x5.solveEquation
+25/32 Test: Matrix_5x5.solveEquation
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/white_box_test" "--gtest_filter=Matrix_5x5.solveEquation"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"Matrix_5x5.solveEquation" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = Matrix_5x5.solveEquation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix_5x5
+[ RUN      ] Matrix_5x5.solveEquation
+[       OK ] Matrix_5x5.solveEquation (2 ms)
+[----------] 1 test from Matrix_5x5 (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix_5x5.solveEquation" end time: Feb 25 21:19 CET
+"Matrix_5x5.solveEquation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/32 Testing: NonEmptyQueue.Insert
+26/32 Test: NonEmptyQueue.Insert
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/tdd_test" "--gtest_filter=NonEmptyQueue.Insert"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"NonEmptyQueue.Insert" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = NonEmptyQueue.Insert
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NonEmptyQueue
+[ RUN      ] NonEmptyQueue.Insert
+[       OK ] NonEmptyQueue.Insert (0 ms)
+[----------] 1 test from NonEmptyQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NonEmptyQueue.Insert" end time: Feb 25 21:19 CET
+"NonEmptyQueue.Insert" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/32 Testing: NonEmptyQueue.RemoveAllForward
+27/32 Test: NonEmptyQueue.RemoveAllForward
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/tdd_test" "--gtest_filter=NonEmptyQueue.RemoveAllForward"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"NonEmptyQueue.RemoveAllForward" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = NonEmptyQueue.RemoveAllForward
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NonEmptyQueue
+[ RUN      ] NonEmptyQueue.RemoveAllForward
+[       OK ] NonEmptyQueue.RemoveAllForward (0 ms)
+[----------] 1 test from NonEmptyQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NonEmptyQueue.RemoveAllForward" end time: Feb 25 21:19 CET
+"NonEmptyQueue.RemoveAllForward" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/32 Testing: NonEmptyQueue.RemoveAllBackward
+28/32 Test: NonEmptyQueue.RemoveAllBackward
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/tdd_test" "--gtest_filter=NonEmptyQueue.RemoveAllBackward"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"NonEmptyQueue.RemoveAllBackward" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = NonEmptyQueue.RemoveAllBackward
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NonEmptyQueue
+[ RUN      ] NonEmptyQueue.RemoveAllBackward
+[       OK ] NonEmptyQueue.RemoveAllBackward (0 ms)
+[----------] 1 test from NonEmptyQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NonEmptyQueue.RemoveAllBackward" end time: Feb 25 21:19 CET
+"NonEmptyQueue.RemoveAllBackward" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/32 Testing: NonEmptyQueue.Find
+29/32 Test: NonEmptyQueue.Find
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/tdd_test" "--gtest_filter=NonEmptyQueue.Find"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"NonEmptyQueue.Find" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = NonEmptyQueue.Find
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NonEmptyQueue
+[ RUN      ] NonEmptyQueue.Find
+[       OK ] NonEmptyQueue.Find (0 ms)
+[----------] 1 test from NonEmptyQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NonEmptyQueue.Find" end time: Feb 25 21:19 CET
+"NonEmptyQueue.Find" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/32 Testing: EmptyQueue.Insert
+30/32 Test: EmptyQueue.Insert
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/tdd_test" "--gtest_filter=EmptyQueue.Insert"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"EmptyQueue.Insert" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = EmptyQueue.Insert
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EmptyQueue
+[ RUN      ] EmptyQueue.Insert
+[       OK ] EmptyQueue.Insert (0 ms)
+[----------] 1 test from EmptyQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EmptyQueue.Insert" end time: Feb 25 21:19 CET
+"EmptyQueue.Insert" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/32 Testing: EmptyQueue.Remove
+31/32 Test: EmptyQueue.Remove
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/tdd_test" "--gtest_filter=EmptyQueue.Remove"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"EmptyQueue.Remove" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = EmptyQueue.Remove
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EmptyQueue
+[ RUN      ] EmptyQueue.Remove
+[       OK ] EmptyQueue.Remove (0 ms)
+[----------] 1 test from EmptyQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EmptyQueue.Remove" end time: Feb 25 21:19 CET
+"EmptyQueue.Remove" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/32 Testing: EmptyQueue.Find
+32/32 Test: EmptyQueue.Find
+Command: "/home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/tdd_test" "--gtest_filter=EmptyQueue.Find"
+Directory: /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build
+"EmptyQueue.Find" start time: Feb 25 21:19 CET
+Output:
+----------------------------------------------------------
+Running main() from /home/michal/Desktop/IVS Projekty/Projekt 1/assignment/build/googletest-master/googletest/src/gtest_main.cc
+Note: Google Test filter = EmptyQueue.Find
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EmptyQueue
+[ RUN      ] EmptyQueue.Find
+[       OK ] EmptyQueue.Find (0 ms)
+[----------] 1 test from EmptyQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EmptyQueue.Find" end time: Feb 25 21:19 CET
+"EmptyQueue.Find" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 25 21:19 CET

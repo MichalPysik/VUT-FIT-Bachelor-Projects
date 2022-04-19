@@ -1,0 +1,37 @@
+IPK Projekt 2 - Varianta ZETA: Sniffer paketů
+Autor: Michal Pyšík (xpysik00)
+
+
+
+Tento program 'vyčmuchává' pakety na zvoleném síťovém rozhraní, pro každý vypisuje krátkou hlavičku obsahující čas, odesílatele a příjemce, a samotná binární data (všechna, i včetně ethernet hlavičky).
+
+Zpracovává pouze packety začínající 14 Bytovou ethernet hlavičkou, navíc se zabudovanou podporou pro speciální pseudo-rozhraní knihovny pcap 'any', jejíž hlavička se lehce liší.
+Program zpracovává pouze pouze IPv4, IPv6 a ARP pakety, v případě IPv4 a IPV6 pouze TCP, UDP a ICMP(v6), všechny ostatní pakety jsou kompletně ignorovány.
+Program lze kdykoli ukončit přerušením (CTRL+C) v případě, že uživatel nechce čekat než se objeví pakety na výpis, paměť je vždy korektně uvolněna.
+
+
+
+Volání programu včetně volitelných argumentů (z velké části převzato ze zadání):
+./ipk-sniffer [-i rozhraní | --interface rozhraní] {-p ­­port} {[--tcp|-t] [--udp|-u] [--arp] [--icmp] } {-n num}
+
+kde:
+-i {argument} nebo --interface {argument} <-- když je vynechán nebo je udán bez argumentu tak vypíše všechna aktivní rozhraní (a ostatní argumenty jsou ignorovány), při udání s argumentem odposlouchává právě na daném rozhraní
+-p [port] <-- při uvedění budou odposlouchávány pouze TCP a UDP pakety obsahující daný port v příjemci či odesílateli, na ICMP(v6) a ARP pakety nemá tento argument žádný vliv
+-t nebo --tcp <-- zpracování pouze TCP paketů
+-u nebo --udp <-- zpracování pouze UDP paketů
+--icmp <-- zpracování pouze ICMP a ICMPv6 paketů
+--arp <-- zpracování pouze ARP rámců
+*předešlé 4 argumenty lze libovolně kombinovat, zadání všech 4 je stejné jako jejich kompletní vynechání*
+-n [celočíselná_hodnota] <-- určuje kolik paketů se zobrazí (pouze vypisované pakety, vyfiltrované se nepočítají), implicitní hodnota bez uvedení tohoto parametru je 1
+
+
+
+Seznam souborů:
+ipk-sniffer.cpp <-- zdrojový kód v C++
+ipk-sniffer.hpp <-- hlavičkový C++ soubor, je vždy potřeba, obsahuje deklaraci a definici globalních proměnných, použité knihovny atd.
+Makefile <-- 'make' nebo 'make all' přeloží zdrojový kód, 'make pack' zabalí všech 5 základních souborů do tar archivu, 'make clean' vymaže tar archiv a spustitelný soubor z adresáře
+README <-- příručka, kterou právě čtete
+manual.pdf <-- dokumentace/manuál
+
+ipk-sniffer <-- spustitelný program, vznikne až po překladu
+xpysik00.tar <-- tar archiv obsahující pouze 5 výše uvedených základních souborů

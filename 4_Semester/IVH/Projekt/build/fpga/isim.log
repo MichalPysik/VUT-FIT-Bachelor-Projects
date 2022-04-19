@@ -1,0 +1,52 @@
+ISim log file
+Running: C:\FitkitSVN\apps\ivh\Projekt\build\fpga\proj3_isim.exe -intstyle ise -gui -tclbatch proj3_isim.tcl 
+ISim O.40d (signature 0x79f3f3a8)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# puts ==========================================================
+Initialize simulation
+==========================================================
+type isim_restart to restart simulation
+# set FIRSTRUN 1
+# proc add_divider TEXT 
+    divider add "$TEXT"
+   
+# proc add_wave_label  FLAGS LABEL NAME  
+      set cmd "wave add $FLAGS"
+      if { $LABEL != "" } {
+         append cmd " -name \"$LABEL\""
+      }
+      append cmd " $NAME"
+      if {[catch {eval $cmd } stderr] != 0} {
+         puts "  WARNING : Signal $NAME doesn't exist"
+      }
+   
+# proc add_wave FLAGS NAME 
+    add_wave_label "$FLAGS" "" "$NAME"
+   
+# proc isim_restart  
+      global FIRSTRUN
+      #set TESTBENCH_SCRIPT "C:/FitkitSVN/apps/ivh/Projekt/build/fpga/../../fpga/sim/isim.tcl"
+      if {$FIRSTRUN == 0} { wcfg new }
+      set FIRSTRUN 0
+      #puts "../../fpga/sim/isim.tcl" 
+      #puts [pwd]
+      if {[catch {source "../../fpga/sim/isim.tcl"}]} { 
+         puts "isim source failed"
+         flush stdout
+      } else {
+         puts "isim found, tb entity: testbench"
+         flush stdout
+         if {[catch {isim_script} stderr] != 0} {
+            puts "ERROR: $stderr"
+         }
+      } 
+   
+# isim_restart
+/testbench/uut/fpga_inst/cnt : No such HDL object or HDL block
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

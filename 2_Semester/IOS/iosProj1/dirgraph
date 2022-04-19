@@ -1,0 +1,235 @@
+#!/usr/bin/env bash
+
+# Bash script na prohledavani adresare
+# Michal Pysik (xpysik00), 2020, napsano v karantene
+
+POSIXLY_CORRECT=yes
+
+# univerzani funkce na errory
+function error_message
+{
+	echo "Error: $errMess" >&2
+	echo "---------------------------------------------------------"
+	echo "Right usage form: ./dirgraph [-i FILE_ERE] [-n] [DIR]"
+	exit 1
+}
+
+
+# defaultni stav promennych
+rootDir=$(pwd)
+ND=1   # v zadani je ze ma pocitat i directory kde zaciname
+NF=0
+ignore=false
+normal=false
+fsArray=("" "" "" "" "" "" "" "" "")
+permCount=0
+
+
+# kontrola normalizace a ignorovani regularniho vyrazu
+while getopts i:n opt
+do
+	case $opt in
+	i)
+		ignore=true;
+		regex=$OPTARG
+		if [ "-n" == "$regex" ]
+		then
+			errMess="Option argument -i expects regular expression"
+			error_message
+		fi
+		;;
+	n)
+		normal=true;
+		;;
+	*)
+		errMess="Some of the option arguments if incorrect"
+		error_message
+	esac
+	
+done
+
+# posunuti argumentu v pripade ignore a/nebo normal
+if [ $ignore = "true" ]
+then
+	shift 2
+fi
+if [ $normal = "true" ]
+then
+	shift
+fi
+
+
+# kontrola poctu argumentu
+if [ $# -gt 1 ]
+then
+	errMess="Entered too many arguments"
+	error_message
+elif [ $# = 1 ]
+then
+	rootDir=$1
+fi
+
+# kontrola ze directory existuje
+if [[ ! -d $rootDir ]]
+then
+	errMess="Entered directory either doesn't exist or was entered incorrectly"
+	error_message
+fi
+
+
+# kontrola ze ignorovany regularni vyraz neobsahuje zpracovavany adresar
+if [ $regex ]
+then
+	if echo $rootDir | egrep -q $regex   # -q je quiet mode
+	then
+		errMess="Cannot ignore the name of directory scanned by the script"
+		error_message
+	fi
+fi
+
+
+
+function searchD()    #funkce na hledani adresare, kdyz najde jiny adresar tak sama sebe rekurzivne zavola
+{
+	seznam=""
+	cd "$1"           #  $1 je argument (adresar) se kterym funkci volame
+	while read item
+	do
+		if [ $ignore == "false" ] || ! echo $item | egrep -q $regex   # zjistit zda neni nazev ignorovan
+		then
+	 		#echo $item --DEBUG--
+			if [ ! -r "$item" ]
+			then
+				permCount=$((permCount+1))
+			elif [ -f "$item" ]
+			then
+				NF=$((NF+1))
+				fSize=$(wc -c < $item)  #saves number of bytes in a file
+				if [ $fSize -lt 100 ]; then
+					fsArray[0]="${fsArray[0]}#"				
+				elif [ $fSize -lt 1024 ]; then
+					fsArray[1]="${fsArray[1]}#"				
+				elif [ $fSize -lt 10240 ]; then
+					fsArray[2]="${fsArray[2]}#"				
+				elif [ $fSize -lt 102400 ]; then
+					fsArray[3]="${fsArray[3]}#"				
+				elif [ $fSize -lt 1048576 ]; then
+					fsArray[4]="${fsArray[4]}#"				
+				elif [ $fSize -lt 10485760 ]; then
+					fsArray[5]="${fsArray[5]}#"				
+				elif [ $fSize -lt 104857600 ]; then
+					fsArray[6]="${fsArray[6]}#"				
+				elif [ $fSize -lt 1073741824 ]; then
+					fsArray[7]="${fsArray[7]}#"
+				else
+					fsArray[8]="${fsArray[8]}#"
+				fi			
+
+			elif [ -d "$item" ]
+			then
+				ND=$((ND+1))
+				tempDir="$1/$item"  # staci spojit directory a item v jeden string (oddeleny "/")
+				seznam="${seznam} $tempDir"         # seznam (dlouhy string) podslozek na dalsi rekurz. volani
+			fi
+		fi
+	done <<< $(find "$rootDir" -type f -or -type d 2> /dev/null) #spousteni find utility
+
+
+	part=""
+
+	for subDir in $seznam     # volani rekurze (volani fce) musi byt az pro projiti celeho directory
+	do
+		if [[ -d $subDir ]]
+		then
+			searchD $subDir
+		else
+			if [ -z "$part" ]
+			then
+				part="$subDir"
+			else
+				part="${part} $subDir"          ## slozite vetveni kvuli nazvum slozek co obsahuji mezery
+				if [[ -d $part ]]
+				then
+					# echo pujdu na $part --DEBUG--
+					searchD "$part"
+					part=""
+				fi
+			fi
+		fi
+	done
+}
+
+
+searchD "$rootDir"   #volani funkce
+
+
+# pripadne zkraceni pomoci normalizace
+if [ $normal == "true" ]
+then
+	maxim=0
+
+	strL=(0 0 0 0 0 0 0 0 0)
+
+	if [ -t 1 ]
+	then
+		width=$(tput cols)
+		((width--))
+	else
+		width=79
+	fi
+
+	((width-=12)) # 12 znaku se vypise jeste pred poctem souboru (napr. jmeno kategorie)
+
+	for i in {0..8}
+	do
+		strL[$i]=${#fsArray[$i]}       # kazda kategorie souboru ma svuj pocet hashtagu
+
+		if [ ${strL[$i]} -gt $maxim ]
+		then
+			maxim=${strL[$i]}          # nejdelsi kategorie souboru se ulozi jako maxim
+		fi
+	done
+	
+	if [ $maxim -gt $width ]   # pokud maxim neprekroci sirku terminalu, normalizace nic menit nebude
+	then
+		ratio=$(echo "scale=4 ; $width / $maxim" | bc)
+		
+		for i in {0..8}
+		do
+			finSize=$(echo "scale=4 ; $ratio * ${strL[$i]}" | bc)
+			
+			finSize=$(LC_NUMERIC="en_US.UTF8" printf "%1.f\n" $finSize) # zaokrouhleni poctu hashtagu
+			
+			fsArray[$i]=${fsArray[$i]::$finSize} # zkrati puvodni string na novou hodnotu
+
+			if [ $finSize == 0 ] && [ ${strL[$i]} -gt 0 ] # at nezaokrouhli nenulovy pocet na nulu
+			then
+				fsArray[$i]="#"
+			fi
+		done
+
+	fi
+fi
+
+
+# tisk reportu
+if [ $permCount -gt 0 ]
+then
+	echo "Warning: found $permCount files without sufficient read permission" >&2
+fi
+echo "Root directory: $rootDir"
+echo "Directories: $ND"
+echo "All files: $NF"
+echo "File size histogram:"
+echo "  <100 B  : ${fsArray[0]}" 
+echo "  <1 KiB  : ${fsArray[1]}" 
+echo "  <10 KiB : ${fsArray[2]}" 
+echo "  <100 KiB: ${fsArray[3]}" 
+echo "  <1 MiB  : ${fsArray[4]}" 
+echo "  <10 MiB : ${fsArray[5]}" 
+echo "  <100 MiB: ${fsArray[6]}" 
+echo "  <1 GiB  : ${fsArray[7]}" 
+echo "  >=1 GiB : ${fsArray[8]}"
+
+
+exit 0

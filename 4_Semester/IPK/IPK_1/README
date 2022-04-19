@@ -1,0 +1,5 @@
+Tento skript bezi na Python verzi 3.8 (dostupny i na Melinovi, testovano)
+
+lze ho spoustet bud: 'python3.8 fileget.py %parametry%'
+
+nebo lze zadat prikaz 'chmod +x fileget.py' a pote ho spoustet pouze prikazem './fileget.py %parametry%'

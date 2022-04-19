@@ -1,0 +1,1 @@
+cat id3-22.txt |  awk -F' ' 'BEGIN {k=0;printf("myarmy;enemyarmy;betrayal;enemybetrayal;expected;classes\n")}  { if($1=="}") k = 0;   if(k) printf("%s;%s;%s;%s;%s;%s\n",$3,$4,$5,$6,$7,$2); if($1=="objects") k=1;}'

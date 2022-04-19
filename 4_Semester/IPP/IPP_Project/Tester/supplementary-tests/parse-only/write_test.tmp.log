@@ -1,0 +1,8 @@
+[Fatal Error] write_test.out:5:22:The element type "arg2" must be terminated by the matching end-tag "</arg2>".
+org.xml.sax.SAXParseException; systemId: file:///home/michal/Desktop/IPP_Project/Tester/supplementary-tests/parse-only/write_test.out; lineNumber: 5; columnNumber: 22; The element type "arg2" must be terminated by the matching end-tag "</arg2>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.a7soft.examxml.ExamXMLHandler.loadXML(ExamXMLHandler.java:111)
+	at com.a7soft.examxml.ExamXML.loadXML(ExamXML.java:247)
+	at com.a7soft.examxml.ExamXML.compare(ExamXML.java:213)
+	at com.a7soft.examxml.ExamXML.main(ExamXML.java:383)

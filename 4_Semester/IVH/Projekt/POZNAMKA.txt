@@ -1,0 +1,2 @@
+Kostra tohoto projektu (èíslo 4 - finální) byla pøevzata z 3. èásti,
+proto se v Makefile, build, atd. jmenuje proj3

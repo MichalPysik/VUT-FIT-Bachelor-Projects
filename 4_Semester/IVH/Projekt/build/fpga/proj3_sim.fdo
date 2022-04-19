@@ -1,0 +1,22 @@
+variable VHDLFILES
+set SIMMODEL "../../build/fpga/proj3.timesim.vhd"
+
+lappend VHDLFILES "../../../../../fpga/units/clkgen/clkgen_config.vhd"
+lappend VHDLFILES "../../build/fpga/proj3_config.vhd"
+lappend VHDLFILES "../../../../../fpga/units/clkgen/clkgen.vhd"
+lappend VHDLFILES "../../../../../fpga/units/math/math_pack.vhd"
+lappend VHDLFILES "../../../../../fpga/ctrls/spi/spi_adc_entity.vhd"
+lappend VHDLFILES "../../../../../fpga/ctrls/spi/spi_adc.vhd"
+lappend VHDLFILES "../../../../../fpga/ctrls/spi/spi_adc_autoincr.vhd"
+lappend VHDLFILES "../../../../../fpga/ctrls/spi/spi_reg.vhd"
+lappend VHDLFILES "../../../../../fpga/ctrls/spi/spi_ctrl.vhd"
+lappend VHDLFILES "../../../../../fpga/chips/fpga_xc3s50.vhd"
+lappend VHDLFILES "../../../../../fpga/chips/architecture_gp/arch_gp_ifc.vhd"
+lappend VHDLFILES "../../../../../fpga/chips/architecture_gp/tlv_gp_ifc.vhd"
+lappend VHDLFILES "../top.vhd"
+lappend VHDLFILES "../counter.vhd"
+lappend VHDLFILES "../display.vhd"
+lappend VHDLFILES "../matrix_pack.vhd"
+lappend VHDLFILES "../cell.vhd"
+
+source "../../../../../base/modelsim.fdo"

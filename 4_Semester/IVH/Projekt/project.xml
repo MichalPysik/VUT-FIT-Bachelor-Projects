@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project outputprefix="proj3">
+
+	<!--  Project description -->
+	<name>IVH proj_final - xpysik00</name>
+	<author>Michal Pysik</author>
+	<authoremail>mrazek@fit.vutbr.cz</authoremail>
+	<revision>20210212</revision>
+	<description>IVH Projekt FINAL - xpysik00</description>
+
+	<!--  MCU part -->
+	<mcu>
+		<file>main.c</file>
+	</mcu>
+
+	<!-- FPGA part -->
+	<fpga architecture="gp">
+		<file>top.vhd</file>
+		<file>counter.vhd</file>
+		<file>display.vhd</file>
+		<file>matrix_pack.vhd</file>
+		<file>cell.vhd</file>
+	</fpga>
+
+</project>

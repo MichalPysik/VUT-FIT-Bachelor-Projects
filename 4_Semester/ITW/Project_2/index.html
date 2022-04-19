@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- ITW PROJEKT 2 -->
+<!-- Autor: Michal Pyšík (login: xpysik00) -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Michal Pyšík</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script/active_section.js"></script>
+    <link rel="icon" href="images/browser_icon.ico">
+</head>
+
+
+<body>
+
+    <nav class="navigation" id="main_navigation">
+        <div class="nav_content">
+            <a id="compass_link" href="http://www.miskopysko.tode.cz/#zakladni_udaje"><img id="img_compass" src="images/compass.png" alt="Navigace" /></a>
+            <h2>SEKCE<br />⤵</h2>
+            <ul>
+                <li id="s1" class="active">
+                    <a href="#zakladni_udaje">ZÁKLADNÍ ÚDAJE</a>
+                </li>
+                <li id="s2">
+                    <a href="#vzdelani">VZDĚLÁNÍ</a>
+                </li>
+                <li id="s3">
+                    <a href="#projekty">PROJEKTY</a>
+                </li>
+                <li id="s4">
+                    <a href="#konicky">KONÍČKY</a>
+                </li>
+                <li id="s5">
+                    <a href="#kontakt">KONTAKT</a>
+                </li>
+            </ul>
+        </div>
+    </nav> <!-- end of main_navigation -->
+
+
+    <div class="main">
+
+        <section class="main_section" id="zakladni_udaje">
+            <div class="section-content" id="zakladni_udaje-content">
+                <h1><a href="http://www.miskopysko.tode.cz">Michal Pyšík</a></h1>
+
+                <div id="under_name">
+                    BRNO <span>│</span> CZECH REPUBLIC <span>│</span> <a id="main_mail" href="mailto:xpysik00@stud.fit.vutbr.cz">xpysik00@stud.fit.vutbr.cz</a>
+                </div>
+
+                <h3>O mně</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras pede libero, dapibus nec, pretium sit amet, tempor quis.
+                    Nulla quis diam. Etiam posuere lacus quis dolor. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Etiam neque.
+                </p>
+            </div>
+        </section>
+
+
+        <div class="line"></div>
+
+
+        <section class="main_section" id="vzdelani">
+            <div class="section-content" id="vzdelani-content">
+                <h2>VZDĚLÁNÍ</h2>
+
+                <div class="school_container">
+                    <div>
+                        <h3>Základní škola Holzova</h3>
+                        <p>
+                            Morbi mollis arcu sed sem iaculis, a auctor quam mattis. Ut scelerisque tortor ac tellus posuere, varius tristique libero lacinia. Integer id interdum lorem, id fringilla massa.
+                            Suspendisse nisl. Etiam quis quam. Suspendisse nisl. Etiam quis quam.
+                        </p>
+                    </div>
+                    <img id="img_holzova" src="images/holzova_logo.png" alt="ZŠ Holzova" />
+                </div>
+
+                <div class="school_container">
+                    <div>
+                        <h3>Gymnázium Brno Vídeňská</h3>
+                        <p>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Integer rutrum, orci. Etiam quis quam. Suspendisse nisl.
+                        </p>
+                    </div>
+                    <img id="img_gvid" src="images/gvid_logo.png" alt="Gymnázium Brno Vídeňská" />
+                </div>
+
+                <div class="school_container">
+                    <div>
+                        <h3>VUT FIT - Bakalářské studium</h3>
+                        <p>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Etiam quis quam.
+                        </p>
+                    </div>
+                    <img id="img_fit" src="images/fit_logo.png" alt="VUT FIT" />
+                </div>
+            </div>
+        </section>
+
+
+        <div class="line"></div>
+
+
+        <section class="main_section" id="projekty">
+            <div class="section-content" id="projekty-content">
+                <h2>PROJEKTY</h2>
+
+                <div id="televize">
+
+                    <div id="obrazovka">
+                        <section class="subsekce" id="s31">
+                            <div class="snimek" id="snimekIZG">
+                                <img id="img_bunny" src="images/bunny.png" alt="Phongův králíček" />
+                                <h3>IZG - Phongův Králíček</h3>
+                                <p>
+                                    Mauris quis luctus odio, sit amet blandit libero. Proin luctus pharetra nunc vitae consectetur. Vestibulum urna quam.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section class="subsekce" id="s32">
+                            <div class="snimek" id="snimekIFJ">
+                                <img id="img_compiler" src="images/compiler.png" alt="Znázornění překladače" />
+                                <h3>IFJ - Překladač IFJcode20</h3>
+                                <p>
+                                    Sed eget erat porta, finibus nisi quis, lacinia diam. Proin et accumsan ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                    Suspendisse lobortis suscipit lorem vitae dapibus.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section class="subsekce" id="s33">
+                            <div class="snimek" id="snimekINP">
+                                <img id="img_brainfck" src="images/brainfck.jpg" alt="Interpret Brainfucku" />
+                                <h3>INP - Brainfuck interpret</h3>
+                                <p>
+                                    Morbi a iaculis felis. Nunc tellus massa, ultricies non faucibus vel, blandit quis metus.
+                                    Morbi ornare eget velit quis faucibus. Nam porta ex leo. Asit amet blandit liberosaliano.
+                                </p>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="ovladac">
+                        <ul>
+                            <li id="izg">
+                                <a href="#s31">IZG-Králíček</a>
+                            </li>
+                            <li id="ifj">
+                                <a href="#s32">IFJ-Překladač</a>
+                            </li>
+                            <li id="inp">
+                                <a href="#s33">INP-Brainfuck</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="line"></div>
+
+
+        <section class="main_section" id="konicky">
+            <div class="section-content" id="konicky-content">
+                <h2>KONÍČKY</h2>
+                <div id="konicky_rows">
+                    <div id="snowboard_row">
+                        <img id="img_snowboard" src="images/snowboard.jpg" alt="Já kdesi v Itálii"/>
+                        <h3>Snowboarding</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend id ante nec vehicula.
+                            Praesent aliquam sem metus, et gravida nisi efficitur id.
+                        </p>
+                    </div>
+                    <div class="vertical_line"></div>
+                    <div id="hudba_row">
+                        <img id="img_piano" src="images/piano.jpg" alt="Piáno" />
+                        <h3>Hudba</h3>
+                        <p>
+                            Sed congue ullamcorper leo in euismod. Curabitur at sapien pharetra, sagittis enim eu, venenatis urna. Aenean posuere dapibus libero.
+                            Fusce sollicitudin felis aliquam nibh eleifend luctus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="line"></div>
+
+
+        <section class="main_section" id="kontakt">
+            <div class="section-content" id="kontakt-content">
+                <h2>KONTAKT</h2>
+                <h3>Kde mě najdete</h3>
+                <p>
+                    Lorem ipsum doram každý den kromě pátků a víkendů od 10:00 do 18:00 nunc vitae nisl tortor. Pellentesque convallis ut dui et laoreet.
+                    Aliquam erat volutpat. Nam aliquam commodo accumsan. In a porta ex.
+                </p>
+                <div class="socials_row">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img src="images/social_facebook.svg" alt="Facebook" />
+                    </a>
+                    <a href="https://www.instagram.com/tpose.everywhere/">
+                        <img src="images/social_instagram.svg" alt="Instagram" />
+                    </a>
+                    <a href="https://www.youtube.com/TheBartman541">
+                        <img src="images/social_youtube.svg" alt="Youtube" />
+                    </a>
+                    <a href="https://discord.gg/jzn4GC9C">
+                        <img src="images/social_discord.svg" alt="Discord" />
+                    </a>
+                    <a href="https://github.com/MichalPysik">
+                        <img src="images/social_git.svg" alt="Github" />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- end of main -->
+
+</body>
+</html>

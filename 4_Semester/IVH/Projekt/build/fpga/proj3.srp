@@ -1,0 +1,1032 @@
+Release 13.1 - xst O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to build/fpga
+Parameter xsthdpdir set to build/fpga
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "build/fpga/proj3.prj"
+Input Format                       : mixed
+
+---- Target Parameters
+Output File Name                   : "build/fpga/proj3.ngc"
+Output Format                      : NGC
+Target Device                      : xc3s50-4-pq208
+
+---- Source Options
+Top Module Name                    : fpga
+
+---- General Options
+Optimization Goal                  : SPEED
+Optimization Effort                : 1
+Library Search Order               : build/fpga/proj3.lso
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FitkitSVN/fpga/units/clkgen/clkgen_config.vhd" in Library work.
+Package <clkgen_cfg> compiled.
+Package body <clkgen_cfg> compiled.
+Compiling vhdl file "C:/FitkitSVN/apps/ivh/Projekt/fpga/matrix_pack.vhd" in Library work.
+Package <matrix_pack> compiled.
+Package body <matrix_pack> compiled.
+Compiling vhdl file "C:/FitkitSVN/apps/ivh/Projekt/fpga/counter.vhd" in Library work.
+Entity <counter> compiled.
+Entity <counter> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/ctrls/spi/spi_adc_entity.vhd" in Library work.
+Entity <SPI_adc> compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/units/math/math_pack.vhd" in Library work.
+Package <math_pack> compiled.
+Package body <math_pack> compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/chips/fpga_xc3s50.vhd" in Library work.
+Entity <fpga> compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" in Library work.
+Entity <clkgen> compiled.
+Entity <clkgen> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/ctrls/spi/spi_ctrl.vhd" in Library work.
+Entity <SPI_ctrl> compiled.
+Entity <SPI_ctrl> (Architecture <Arch_SPI_ctrl2>) compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/chips/architecture_gp/tlv_gp_ifc.vhd" in Library work.
+Entity <tlv_gp_ifc> compiled.
+Compiling vhdl file "C:/FitkitSVN/apps/ivh/Projekt/build/fpga/proj3_config.vhd" in Library work.
+Package <fpga_cfg> compiled.
+Package body <fpga_cfg> compiled.
+Compiling vhdl file "C:/FitkitSVN/apps/ivh/Projekt/fpga/display.vhd" in Library work.
+Entity <display> compiled.
+Entity <display> (Architecture <behv>) compiled.
+Compiling vhdl file "C:/FitkitSVN/apps/ivh/Projekt/fpga/cell.vhd" in Library work.
+Entity <cell> compiled.
+Entity <cell> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/FitkitSVN/apps/ivh/Projekt/fpga/top.vhd" in Library work.
+Entity <tlv_gp_ifc> (Architecture <main>) compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/chips/architecture_gp/arch_gp_ifc.vhd" in Library work.
+Entity <fpga> (Architecture <arch_gp_ifc>) compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/ctrls/spi/spi_reg.vhd" in Library work.
+Package <spi_cfg> compiled.
+Entity <SPI_reg> compiled.
+Entity <SPI_reg> (Architecture <beh>) compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/ctrls/spi/spi_adc_autoincr.vhd" in Library work.
+Entity <SPI_adc> (Architecture <autoincrement>) compiled.
+Compiling vhdl file "C:/FitkitSVN/fpga/ctrls/spi/spi_adc.vhd" in Library work.
+Entity <SPI_adc> (Architecture <basic>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <fpga> in library <work> (architecture <arch_gp_ifc>).
+
+Analyzing hierarchy for entity <clkgen> in library <work> (architecture <BEHAVIORAL>) with generics.
+	FREQ = "dcm_25mhz"
+	GENIBUF = true
+
+Analyzing hierarchy for entity <SPI_ctrl> in library <work> (architecture <Arch_SPI_ctrl2>).
+
+Analyzing hierarchy for entity <tlv_gp_ifc> in library <work> (architecture <main>).
+
+Analyzing hierarchy for entity <display> in library <work> (architecture <behv>).
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <Behavioral>) with generics.
+	CLK_FREQ = 25000000
+	OUT_FREQ = 8
+
+Analyzing hierarchy for entity <cell> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <Behavioral>) with generics.
+	CLK_FREQ = 25000000
+	OUT_FREQ = 1600
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <fpga> in library <work> (Architecture <arch_gp_ifc>).
+Entity <fpga> analyzed. Unit <fpga> generated.
+
+Analyzing generic Entity <clkgen> in library <work> (Architecture <BEHAVIORAL>).
+	FREQ = "dcm_25mhz"
+	GENIBUF = true
+WARNING:Xst:2211 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 96: Instantiating black box module <BUFG>.
+WARNING:Xst:2211 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 106: Instantiating black box module <IBUFG>.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'CLK0' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'CLK90' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'CLK180' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'CLK270' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'CLKDV' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'CLK2X' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'CLK2X180' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'CLKFX180' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'STATUS' of component 'DCM'.
+WARNING:Xst:753 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Unconnected output port 'PSDONE' of component 'DCM'.
+WARNING:Xst:2211 - "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd" line 114: Instantiating black box module <DCM>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "CLKFX_DIVIDE =  7" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "CLKFX_MULTIPLY =  25" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "CLKIN_PERIOD =  135.6339999999999900" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "CLK_FEEDBACK =  NONE" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_INST> in unit <clkgen>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_INST> in unit <clkgen>.
+Entity <clkgen> analyzed. Unit <clkgen> generated.
+
+Analyzing Entity <SPI_ctrl> in library <work> (Architecture <Arch_SPI_ctrl2>).
+Entity <SPI_ctrl> analyzed. Unit <SPI_ctrl> generated.
+
+Analyzing Entity <tlv_gp_ifc> in library <work> (Architecture <main>).
+WARNING:Xst:819 - "C:/FitkitSVN/apps/ivh/Projekt/fpga/top.vhd" line 166: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <cell_DATA>
+Entity <tlv_gp_ifc> analyzed. Unit <tlv_gp_ifc> generated.
+
+Analyzing Entity <display> in library <work> (Architecture <behv>).
+WARNING:Xst:819 - "C:/FitkitSVN/apps/ivh/Projekt/fpga/display.vhd" line 54: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <data>
+Entity <display> analyzed. Unit <display> generated.
+
+Analyzing generic Entity <counter.2> in library <work> (Architecture <Behavioral>).
+	CLK_FREQ = 25000000
+	OUT_FREQ = 1600
+Entity <counter.2> analyzed. Unit <counter.2> generated.
+
+Analyzing generic Entity <counter.1> in library <work> (Architecture <Behavioral>).
+	CLK_FREQ = 25000000
+	OUT_FREQ = 8
+Entity <counter.1> analyzed. Unit <counter.1> generated.
+
+Analyzing Entity <cell> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/FitkitSVN/apps/ivh/Projekt/fpga/cell.vhd" line 34: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <INIT_STATE>
+Entity <cell> analyzed. Unit <cell> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <SPI_ctrl>.
+    Related source file is "C:/FitkitSVN/fpga/ctrls/spi/spi_ctrl.vhd".
+    Found finite state machine <FSM_0> for signal <pstate>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Clock enable       | dovld                     (positive)           |
+    | Reset              | SPI_CS                    (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | sinit                                          |
+    | Power Up State     | sinit                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <SPI_MISO>.
+    Found 1-bit register for signal <spi_clk_1>.
+    Found 1-bit register for signal <spi_clk_2>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Tristate(s).
+Unit <SPI_ctrl> synthesized.
+
+
+Synthesizing Unit <counter_1>.
+    Related source file is "C:/FitkitSVN/apps/ivh/Projekt/fpga/counter.vhd".
+    Found 1-bit register for signal <EN>.
+    Found 22-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <counter_1> synthesized.
+
+
+Synthesizing Unit <cell>.
+    Related source file is "C:/FitkitSVN/apps/ivh/Projekt/fpga/cell.vhd".
+    Found 1-bit register for signal <CURRENT_STATE>.
+Unit <cell> synthesized.
+
+
+Synthesizing Unit <counter_2>.
+    Related source file is "C:/FitkitSVN/apps/ivh/Projekt/fpga/counter.vhd".
+    Found 1-bit register for signal <EN>.
+    Found 14-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <counter_2> synthesized.
+
+
+Synthesizing Unit <clkgen>.
+    Related source file is "C:/FitkitSVN/fpga/units/clkgen/clkgen.vhd".
+WARNING:Xst:1780 - Signal <CLK1X_BUF> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <clkgen> synthesized.
+
+
+Synthesizing Unit <display>.
+    Related source file is "C:/FitkitSVN/apps/ivh/Projekt/fpga/display.vhd".
+WARNING:Xst:647 - Input <smclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit up counter for signal <A_temp>.
+    Found 7-bit register for signal <LSB>.
+    Found 7-bit adder for signal <LSB$addsub0000> created at line 66.
+    Found 8-bit register for signal <R_temp>.
+    Found 1-bit 121-to-1 multiplexer for signal <R_temp_0$mux0000> created at line 69.
+    Found 1-bit 121-to-1 multiplexer for signal <R_temp_1$mux0000> created at line 69.
+    Found 1-bit 121-to-1 multiplexer for signal <R_temp_2$mux0000> created at line 69.
+    Found 1-bit 121-to-1 multiplexer for signal <R_temp_3$mux0000> created at line 69.
+    Found 1-bit 121-to-1 multiplexer for signal <R_temp_4$mux0000> created at line 69.
+    Found 1-bit 121-to-1 multiplexer for signal <R_temp_5$mux0000> created at line 69.
+    Found 1-bit 121-to-1 multiplexer for signal <R_temp_6$mux0000> created at line 69.
+    Found 1-bit 121-to-1 multiplexer for signal <R_temp_7$mux0000> created at line 69.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
+Unit <display> synthesized.
+
+
+Synthesizing Unit <tlv_gp_ifc>.
+    Related source file is "C:/FitkitSVN/apps/ivh/Projekt/fpga/top.vhd".
+WARNING:Xst:1305 - Output <IRQ> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <RD<3>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<30>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<25>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <KIN> is never assigned. Tied to value 0000.
+WARNING:Xst:2563 - Inout <RD<4>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<31>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<26>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <RD<5>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<32>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<27>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <RD<6>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<33>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<28>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <RCKE> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <RD<7>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<34>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<29>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <ACLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <X<35>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<40>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <RCLK> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <X<41>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<36>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<42>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<37>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <ADIN> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <X<43>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<38>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <RWE> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <X<44>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<39>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <AFBUS<10>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<45>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <ABCLK> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <AFBUS<11>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <LEDF> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <LE> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FCLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <LRS> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <ADOUT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <RDQM> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <LRW> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <KOUT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <RA> is never assigned. Tied to value 000000000000000.
+WARNING:Xst:2563 - Inout <LD<0>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <LD<1>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <LD<2>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <LD<3>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <LD<4>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <LD<5>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <AFBUS<0>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <LD<6>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <ALRCIN> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <AFBUS<1>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <LD<7>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <ALRCOUT> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <AFBUS<2>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <P3M<0>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <SPI_DI> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <AFBUS<3>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <P3M<1>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <SPI_CS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SPI_DO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <AFBUS<4>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <P3M<2>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <AFBUS<5>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <SPI_DI_REQ> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <X<11>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <P3M<3>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <RCS> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <AFBUS<6>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<12>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <P3M<4>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <AFBUS<7>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<13>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <P3M<5>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <SPI_DO_VLD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <AFBUS<8>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <RRAS> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <X<14>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <P3M<6>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <AFBUS<9>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<15>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <P3M<7>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <RCAS> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <RD<0>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <RD<1>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <RD<2>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <X<24>> is never assigned. Tied to value Z.
+    Found 1-bit tristate buffer for signal <AFBUS<11>>.
+    Found 1-bit tristate buffer for signal <AFBUS<10>>.
+    Found 1-bit tristate buffer for signal <AFBUS<9>>.
+    Found 1-bit tristate buffer for signal <AFBUS<8>>.
+    Found 1-bit tristate buffer for signal <AFBUS<7>>.
+    Found 1-bit tristate buffer for signal <AFBUS<6>>.
+    Found 1-bit tristate buffer for signal <AFBUS<5>>.
+    Found 1-bit tristate buffer for signal <AFBUS<4>>.
+    Found 1-bit tristate buffer for signal <AFBUS<3>>.
+    Found 1-bit tristate buffer for signal <AFBUS<2>>.
+    Found 1-bit tristate buffer for signal <AFBUS<1>>.
+    Found 1-bit tristate buffer for signal <AFBUS<0>>.
+    Found 1-bit tristate buffer for signal <P3M<7>>.
+    Found 1-bit tristate buffer for signal <P3M<6>>.
+    Found 1-bit tristate buffer for signal <P3M<5>>.
+    Found 1-bit tristate buffer for signal <P3M<4>>.
+    Found 1-bit tristate buffer for signal <P3M<3>>.
+    Found 1-bit tristate buffer for signal <P3M<2>>.
+    Found 1-bit tristate buffer for signal <P3M<1>>.
+    Found 1-bit tristate buffer for signal <P3M<0>>.
+    Found 1-bit tristate buffer for signal <LD<7>>.
+    Found 1-bit tristate buffer for signal <LD<6>>.
+    Found 1-bit tristate buffer for signal <LD<5>>.
+    Found 1-bit tristate buffer for signal <LD<4>>.
+    Found 1-bit tristate buffer for signal <LD<3>>.
+    Found 1-bit tristate buffer for signal <LD<2>>.
+    Found 1-bit tristate buffer for signal <LD<1>>.
+    Found 1-bit tristate buffer for signal <LD<0>>.
+    Found 1-bit tristate buffer for signal <X<45>>.
+    Found 1-bit tristate buffer for signal <X<44>>.
+    Found 1-bit tristate buffer for signal <X<43>>.
+    Found 1-bit tristate buffer for signal <X<42>>.
+    Found 1-bit tristate buffer for signal <X<41>>.
+    Found 1-bit tristate buffer for signal <X<40>>.
+    Found 1-bit tristate buffer for signal <X<39>>.
+    Found 1-bit tristate buffer for signal <X<38>>.
+    Found 1-bit tristate buffer for signal <X<37>>.
+    Found 1-bit tristate buffer for signal <X<36>>.
+    Found 1-bit tristate buffer for signal <X<35>>.
+    Found 1-bit tristate buffer for signal <X<34>>.
+    Found 1-bit tristate buffer for signal <X<33>>.
+    Found 1-bit tristate buffer for signal <X<32>>.
+    Found 1-bit tristate buffer for signal <X<31>>.
+    Found 1-bit tristate buffer for signal <X<30>>.
+    Found 1-bit tristate buffer for signal <X<29>>.
+    Found 1-bit tristate buffer for signal <X<28>>.
+    Found 1-bit tristate buffer for signal <X<27>>.
+    Found 1-bit tristate buffer for signal <X<26>>.
+    Found 1-bit tristate buffer for signal <X<25>>.
+    Found 1-bit tristate buffer for signal <X<24>>.
+    Found 1-bit tristate buffer for signal <X<15>>.
+    Found 1-bit tristate buffer for signal <X<14>>.
+    Found 1-bit tristate buffer for signal <X<13>>.
+    Found 1-bit tristate buffer for signal <X<12>>.
+    Found 1-bit tristate buffer for signal <X<11>>.
+    Found 1-bit tristate buffer for signal <RD<7>>.
+    Found 1-bit tristate buffer for signal <RD<6>>.
+    Found 1-bit tristate buffer for signal <RD<5>>.
+    Found 1-bit tristate buffer for signal <RD<4>>.
+    Found 1-bit tristate buffer for signal <RD<3>>.
+    Found 1-bit tristate buffer for signal <RD<2>>.
+    Found 1-bit tristate buffer for signal <RD<1>>.
+    Found 1-bit tristate buffer for signal <RD<0>>.
+    Found 1-bit register for signal <CURR_DIR<0>>.
+    Found 9-bit comparator greatequal for signal <CURR_DIR_0$cmp_ge0000> created at line 181.
+    Found 9-bit comparator less for signal <CURR_DIR_0$cmp_lt0000> created at line 174.
+    Found 9-bit comparator less for signal <CURR_DIR_0$cmp_lt0001> created at line 177.
+    Found 128-bit register for signal <DATA>.
+    Found 8-bit register for signal <frame_counter>.
+    Found 9-bit comparator less for signal <frame_counter$cmp_lt0000> created at line 181.
+    Found 9-bit comparator less for signal <frame_counter$cmp_lt0001> created at line 185.
+    Found 9-bit comparator less for signal <frame_counter$cmp_lt0002> created at line 188.
+    Found 8-bit adder for signal <frame_counter$share0000>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred  63 Tristate(s).
+Unit <tlv_gp_ifc> synthesized.
+
+
+Synthesizing Unit <fpga>.
+    Related source file is "C:/FitkitSVN/fpga/chips/architecture_gp/arch_gp_ifc.vhd".
+WARNING:Xst:647 - Input <SPI_CS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <ispi_rst> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <fpga> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 3
+ 14-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 144
+ 1-bit register                                        : 141
+ 128-bit register                                      : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 6
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 5
+# Multiplexers                                         : 8
+ 1-bit 121-to-1 multiplexer                            : 8
+# Tristates                                            : 64
+ 1-bit tristate buffer                                 : 64
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <spictrl/pstate/FSM> on signal <pstate[1:6]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ sinit    | 000001
+ srcv1    | 000010
+ srcv2    | 001000
+ srcv3    | 010000
+ sactive  | 100000
+ snactive | 000100
+----------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 2
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 3
+ 14-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 156
+ Flip-Flops                                            : 156
+# Comparators                                          : 6
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 5
+# Multiplexers                                         : 8
+ 1-bit 121-to-1 multiplexer                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <LSB_0> has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <LSB_1> has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <LSB_2> has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <fpga> ...
+
+Optimizing unit <display> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 326
+ Flip-Flops                                            : 326
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : build\fpga\proj3.ngr
+Top Level Output File Name         : build/fpga/proj3.ngc
+Output Format                      : NGC
+Optimization Goal                  : SPEED
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 124
+
+Cell Usage :
+# BELS                             : 1652
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 482
+#      LUT2                        : 71
+#      LUT2_D                      : 4
+#      LUT2_L                      : 1
+#      LUT3                        : 307
+#      LUT3_D                      : 3
+#      LUT3_L                      : 9
+#      LUT4                        : 259
+#      LUT4_D                      : 6
+#      LUT4_L                      : 6
+#      MUXCY                       : 34
+#      MUXF5                       : 235
+#      MUXF6                       : 112
+#      MUXF7                       : 56
+#      MUXF8                       : 24
+#      VCC                         : 1
+#      XORCY                       : 36
+# FlipFlops/Latches                : 326
+#      FDC                         : 38
+#      FDCE                        : 20
+#      FDCPE                       : 264
+#      FDP                         : 2
+#      FDPE                        : 2
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 116
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      IOBUF                       : 1
+#      OBUF                        : 48
+#      OBUFT                       : 63
+# DCMs                             : 1
+#      DCM                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-4 
+
+ Number of Slices:                      609  out of    768    79%  
+ Number of Slice Flip Flops:            326  out of   1536    21%  
+ Number of 4 input LUTs:               1153  out of   1536    75%  
+ Number of IOs:                         124
+ Number of bonded IOBs:                 116  out of    124    93%  
+ Number of GCLKs:                         1  out of      8    12%  
+ Number of DCMs:                          1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+SMCLK                              | DCMclkgen/DCM_INST:CLKFX| 326   |
+-----------------------------------+-------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------------------------------------------+----------------------------------------------------------------+-------+
+Control Signal                                                              | Buffer(FF name)                                                | Load  |
+----------------------------------------------------------------------------+----------------------------------------------------------------+-------+
+fpga_inst/x_cell[0].y_cell[0].instance_cell/CURRENT_STATE__and0000(reset1:O)| NONE(fpga_inst/CURR_DIR_0)                                     | 185   |
+N0(XST_GND:G)                                                               | NONE(fpga_inst/x_cell[0].y_cell[0].instance_cell/CURRENT_STATE)| 128   |
+SPI_FPGA_CS                                                                 | IBUF                                                           | 5     |
+fpga_inst/DATA_0__and0000(fpga_inst/DATA_0__and00001:O)                     | NONE(fpga_inst/DATA_0)                                         | 1     |
+fpga_inst/DATA_0__and0001(fpga_inst/DATA_0__and00011:O)                     | NONE(fpga_inst/DATA_0)                                         | 1     |
+fpga_inst/DATA_100__and0000(fpga_inst/DATA_100__and00001:O)                 | NONE(fpga_inst/DATA_100)                                       | 1     |
+fpga_inst/DATA_100__and0001(fpga_inst/DATA_100__and00011:O)                 | NONE(fpga_inst/DATA_100)                                       | 1     |
+fpga_inst/DATA_101__and0000(fpga_inst/DATA_101__and00001:O)                 | NONE(fpga_inst/DATA_101)                                       | 1     |
+fpga_inst/DATA_101__and0001(fpga_inst/DATA_101__and00011:O)                 | NONE(fpga_inst/DATA_101)                                       | 1     |
+fpga_inst/DATA_102__and0000(fpga_inst/DATA_102__and00001:O)                 | NONE(fpga_inst/DATA_102)                                       | 1     |
+fpga_inst/DATA_102__and0001(fpga_inst/DATA_102__and00011:O)                 | NONE(fpga_inst/DATA_102)                                       | 1     |
+fpga_inst/DATA_103__and0000(fpga_inst/DATA_103__and00001:O)                 | NONE(fpga_inst/DATA_103)                                       | 1     |
+fpga_inst/DATA_103__and0001(fpga_inst/DATA_103__and00011:O)                 | NONE(fpga_inst/DATA_103)                                       | 1     |
+fpga_inst/DATA_104__and0000(fpga_inst/DATA_104__and00001:O)                 | NONE(fpga_inst/DATA_104)                                       | 1     |
+fpga_inst/DATA_104__and0001(fpga_inst/DATA_104__and00011:O)                 | NONE(fpga_inst/DATA_104)                                       | 1     |
+fpga_inst/DATA_105__and0000(fpga_inst/DATA_105__and00001:O)                 | NONE(fpga_inst/DATA_105)                                       | 1     |
+fpga_inst/DATA_105__and0001(fpga_inst/DATA_105__and00011:O)                 | NONE(fpga_inst/DATA_105)                                       | 1     |
+fpga_inst/DATA_106__and0000(fpga_inst/DATA_106__and00001:O)                 | NONE(fpga_inst/DATA_106)                                       | 1     |
+fpga_inst/DATA_106__and0001(fpga_inst/DATA_106__and00011:O)                 | NONE(fpga_inst/DATA_106)                                       | 1     |
+fpga_inst/DATA_107__and0000(fpga_inst/DATA_107__and00001:O)                 | NONE(fpga_inst/DATA_107)                                       | 1     |
+fpga_inst/DATA_107__and0001(fpga_inst/DATA_107__and00011:O)                 | NONE(fpga_inst/DATA_107)                                       | 1     |
+fpga_inst/DATA_108__and0000(fpga_inst/DATA_108__and00001:O)                 | NONE(fpga_inst/DATA_108)                                       | 1     |
+fpga_inst/DATA_108__and0001(fpga_inst/DATA_108__and00011:O)                 | NONE(fpga_inst/DATA_108)                                       | 1     |
+fpga_inst/DATA_109__and0000(fpga_inst/DATA_109__and00001:O)                 | NONE(fpga_inst/DATA_109)                                       | 1     |
+fpga_inst/DATA_109__and0001(fpga_inst/DATA_109__and00011:O)                 | NONE(fpga_inst/DATA_109)                                       | 1     |
+fpga_inst/DATA_10__and0000(fpga_inst/DATA_10__and00001:O)                   | NONE(fpga_inst/DATA_10)                                        | 1     |
+fpga_inst/DATA_10__and0001(fpga_inst/DATA_10__and00011:O)                   | NONE(fpga_inst/DATA_10)                                        | 1     |
+fpga_inst/DATA_110__and0000(fpga_inst/DATA_110__and00001:O)                 | NONE(fpga_inst/DATA_110)                                       | 1     |
+fpga_inst/DATA_110__and0001(fpga_inst/DATA_110__and00011:O)                 | NONE(fpga_inst/DATA_110)                                       | 1     |
+fpga_inst/DATA_111__and0000(fpga_inst/DATA_111__and00001:O)                 | NONE(fpga_inst/DATA_111)                                       | 1     |
+fpga_inst/DATA_111__and0001(fpga_inst/DATA_111__and00011:O)                 | NONE(fpga_inst/DATA_111)                                       | 1     |
+fpga_inst/DATA_112__and0000(fpga_inst/DATA_112__and00001:O)                 | NONE(fpga_inst/DATA_112)                                       | 1     |
+fpga_inst/DATA_112__and0001(fpga_inst/DATA_112__and00011:O)                 | NONE(fpga_inst/DATA_112)                                       | 1     |
+fpga_inst/DATA_113__and0000(fpga_inst/DATA_113__and00001:O)                 | NONE(fpga_inst/DATA_113)                                       | 1     |
+fpga_inst/DATA_113__and0001(fpga_inst/DATA_113__and00011:O)                 | NONE(fpga_inst/DATA_113)                                       | 1     |
+fpga_inst/DATA_114__and0000(fpga_inst/DATA_114__and00001:O)                 | NONE(fpga_inst/DATA_114)                                       | 1     |
+fpga_inst/DATA_114__and0001(fpga_inst/DATA_114__and00011:O)                 | NONE(fpga_inst/DATA_114)                                       | 1     |
+fpga_inst/DATA_115__and0000(fpga_inst/DATA_115__and00001:O)                 | NONE(fpga_inst/DATA_115)                                       | 1     |
+fpga_inst/DATA_115__and0001(fpga_inst/DATA_115__and00011:O)                 | NONE(fpga_inst/DATA_115)                                       | 1     |
+fpga_inst/DATA_116__and0000(fpga_inst/DATA_116__and00001:O)                 | NONE(fpga_inst/DATA_116)                                       | 1     |
+fpga_inst/DATA_116__and0001(fpga_inst/DATA_116__and00011:O)                 | NONE(fpga_inst/DATA_116)                                       | 1     |
+fpga_inst/DATA_117__and0000(fpga_inst/DATA_117__and00001:O)                 | NONE(fpga_inst/DATA_117)                                       | 1     |
+fpga_inst/DATA_117__and0001(fpga_inst/DATA_117__and00011:O)                 | NONE(fpga_inst/DATA_117)                                       | 1     |
+fpga_inst/DATA_118__and0000(fpga_inst/DATA_118__and00001:O)                 | NONE(fpga_inst/DATA_118)                                       | 1     |
+fpga_inst/DATA_118__and0001(fpga_inst/DATA_118__and00011:O)                 | NONE(fpga_inst/DATA_118)                                       | 1     |
+fpga_inst/DATA_119__and0000(fpga_inst/DATA_119__and00001:O)                 | NONE(fpga_inst/DATA_119)                                       | 1     |
+fpga_inst/DATA_119__and0001(fpga_inst/DATA_119__and00011:O)                 | NONE(fpga_inst/DATA_119)                                       | 1     |
+fpga_inst/DATA_11__and0000(fpga_inst/DATA_11__and00001:O)                   | NONE(fpga_inst/DATA_11)                                        | 1     |
+fpga_inst/DATA_11__and0001(fpga_inst/DATA_11__and00011:O)                   | NONE(fpga_inst/DATA_11)                                        | 1     |
+fpga_inst/DATA_120__and0000(fpga_inst/DATA_120__and00001:O)                 | NONE(fpga_inst/DATA_120)                                       | 1     |
+fpga_inst/DATA_120__and0001(fpga_inst/DATA_120__and00011:O)                 | NONE(fpga_inst/DATA_120)                                       | 1     |
+fpga_inst/DATA_121__and0000(fpga_inst/DATA_121__and00001:O)                 | NONE(fpga_inst/DATA_121)                                       | 1     |
+fpga_inst/DATA_121__and0001(fpga_inst/DATA_121__and00011:O)                 | NONE(fpga_inst/DATA_121)                                       | 1     |
+fpga_inst/DATA_122__and0000(fpga_inst/DATA_122__and00001:O)                 | NONE(fpga_inst/DATA_122)                                       | 1     |
+fpga_inst/DATA_122__and0001(fpga_inst/DATA_122__and00011:O)                 | NONE(fpga_inst/DATA_122)                                       | 1     |
+fpga_inst/DATA_123__and0000(fpga_inst/DATA_123__and00001:O)                 | NONE(fpga_inst/DATA_123)                                       | 1     |
+fpga_inst/DATA_123__and0001(fpga_inst/DATA_123__and00011:O)                 | NONE(fpga_inst/DATA_123)                                       | 1     |
+fpga_inst/DATA_124__and0000(fpga_inst/DATA_124__and00001:O)                 | NONE(fpga_inst/DATA_124)                                       | 1     |
+fpga_inst/DATA_124__and0001(fpga_inst/DATA_124__and00011:O)                 | NONE(fpga_inst/DATA_124)                                       | 1     |
+fpga_inst/DATA_125__and0000(fpga_inst/DATA_125__and00001:O)                 | NONE(fpga_inst/DATA_125)                                       | 1     |
+fpga_inst/DATA_125__and0001(fpga_inst/DATA_125__and00011:O)                 | NONE(fpga_inst/DATA_125)                                       | 1     |
+fpga_inst/DATA_126__and0000(fpga_inst/DATA_126__and00001:O)                 | NONE(fpga_inst/DATA_126)                                       | 1     |
+fpga_inst/DATA_126__and0001(fpga_inst/DATA_126__and00011:O)                 | NONE(fpga_inst/DATA_126)                                       | 1     |
+fpga_inst/DATA_127__and0000(fpga_inst/DATA_127__and00001:O)                 | NONE(fpga_inst/DATA_127)                                       | 1     |
+fpga_inst/DATA_127__and0001(fpga_inst/DATA_127__and00011:O)                 | NONE(fpga_inst/DATA_127)                                       | 1     |
+fpga_inst/DATA_12__and0000(fpga_inst/DATA_12__and00001:O)                   | NONE(fpga_inst/DATA_12)                                        | 1     |
+fpga_inst/DATA_12__and0001(fpga_inst/DATA_12__and00011:O)                   | NONE(fpga_inst/DATA_12)                                        | 1     |
+fpga_inst/DATA_13__and0000(fpga_inst/DATA_13__and00001:O)                   | NONE(fpga_inst/DATA_13)                                        | 1     |
+fpga_inst/DATA_13__and0001(fpga_inst/DATA_13__and00011:O)                   | NONE(fpga_inst/DATA_13)                                        | 1     |
+fpga_inst/DATA_14__and0000(fpga_inst/DATA_14__and00001:O)                   | NONE(fpga_inst/DATA_14)                                        | 1     |
+fpga_inst/DATA_14__and0001(fpga_inst/DATA_14__and00011:O)                   | NONE(fpga_inst/DATA_14)                                        | 1     |
+fpga_inst/DATA_15__and0000(fpga_inst/DATA_15__and00001:O)                   | NONE(fpga_inst/DATA_15)                                        | 1     |
+fpga_inst/DATA_15__and0001(fpga_inst/DATA_15__and00011:O)                   | NONE(fpga_inst/DATA_15)                                        | 1     |
+fpga_inst/DATA_16__and0000(fpga_inst/DATA_16__and00001:O)                   | NONE(fpga_inst/DATA_16)                                        | 1     |
+fpga_inst/DATA_16__and0001(fpga_inst/DATA_16__and00011:O)                   | NONE(fpga_inst/DATA_16)                                        | 1     |
+fpga_inst/DATA_17__and0000(fpga_inst/DATA_17__and00001:O)                   | NONE(fpga_inst/DATA_17)                                        | 1     |
+fpga_inst/DATA_17__and0001(fpga_inst/DATA_17__and00011:O)                   | NONE(fpga_inst/DATA_17)                                        | 1     |
+fpga_inst/DATA_18__and0000(fpga_inst/DATA_18__and00001:O)                   | NONE(fpga_inst/DATA_18)                                        | 1     |
+fpga_inst/DATA_18__and0001(fpga_inst/DATA_18__and00011:O)                   | NONE(fpga_inst/DATA_18)                                        | 1     |
+fpga_inst/DATA_19__and0000(fpga_inst/DATA_19__and00001:O)                   | NONE(fpga_inst/DATA_19)                                        | 1     |
+fpga_inst/DATA_19__and0001(fpga_inst/DATA_19__and00011:O)                   | NONE(fpga_inst/DATA_19)                                        | 1     |
+fpga_inst/DATA_1__and0000(fpga_inst/DATA_1__and00001:O)                     | NONE(fpga_inst/DATA_1)                                         | 1     |
+fpga_inst/DATA_1__and0001(fpga_inst/DATA_1__and00011:O)                     | NONE(fpga_inst/DATA_1)                                         | 1     |
+fpga_inst/DATA_20__and0000(fpga_inst/DATA_20__and00001:O)                   | NONE(fpga_inst/DATA_20)                                        | 1     |
+fpga_inst/DATA_20__and0001(fpga_inst/DATA_20__and00011:O)                   | NONE(fpga_inst/DATA_20)                                        | 1     |
+fpga_inst/DATA_21__and0000(fpga_inst/DATA_21__and00001:O)                   | NONE(fpga_inst/DATA_21)                                        | 1     |
+fpga_inst/DATA_21__and0001(fpga_inst/DATA_21__and00011:O)                   | NONE(fpga_inst/DATA_21)                                        | 1     |
+fpga_inst/DATA_22__and0000(fpga_inst/DATA_22__and00001:O)                   | NONE(fpga_inst/DATA_22)                                        | 1     |
+fpga_inst/DATA_22__and0001(fpga_inst/DATA_22__and00011:O)                   | NONE(fpga_inst/DATA_22)                                        | 1     |
+fpga_inst/DATA_23__and0000(fpga_inst/DATA_23__and00001:O)                   | NONE(fpga_inst/DATA_23)                                        | 1     |
+fpga_inst/DATA_23__and0001(fpga_inst/DATA_23__and00011:O)                   | NONE(fpga_inst/DATA_23)                                        | 1     |
+fpga_inst/DATA_24__and0000(fpga_inst/DATA_24__and00001:O)                   | NONE(fpga_inst/DATA_24)                                        | 1     |
+fpga_inst/DATA_24__and0001(fpga_inst/DATA_24__and00011:O)                   | NONE(fpga_inst/DATA_24)                                        | 1     |
+fpga_inst/DATA_25__and0000(fpga_inst/DATA_25__and00001:O)                   | NONE(fpga_inst/DATA_25)                                        | 1     |
+fpga_inst/DATA_25__and0001(fpga_inst/DATA_25__and00011:O)                   | NONE(fpga_inst/DATA_25)                                        | 1     |
+fpga_inst/DATA_26__and0000(fpga_inst/DATA_26__and00001:O)                   | NONE(fpga_inst/DATA_26)                                        | 1     |
+fpga_inst/DATA_26__and0001(fpga_inst/DATA_26__and00011:O)                   | NONE(fpga_inst/DATA_26)                                        | 1     |
+fpga_inst/DATA_27__and0000(fpga_inst/DATA_27__and00001:O)                   | NONE(fpga_inst/DATA_27)                                        | 1     |
+fpga_inst/DATA_27__and0001(fpga_inst/DATA_27__and00011:O)                   | NONE(fpga_inst/DATA_27)                                        | 1     |
+fpga_inst/DATA_28__and0000(fpga_inst/DATA_28__and00001:O)                   | NONE(fpga_inst/DATA_28)                                        | 1     |
+fpga_inst/DATA_28__and0001(fpga_inst/DATA_28__and00011:O)                   | NONE(fpga_inst/DATA_28)                                        | 1     |
+fpga_inst/DATA_29__and0000(fpga_inst/DATA_29__and00001:O)                   | NONE(fpga_inst/DATA_29)                                        | 1     |
+fpga_inst/DATA_29__and0001(fpga_inst/DATA_29__and00011:O)                   | NONE(fpga_inst/DATA_29)                                        | 1     |
+fpga_inst/DATA_2__and0000(fpga_inst/DATA_2__and00001:O)                     | NONE(fpga_inst/DATA_2)                                         | 1     |
+fpga_inst/DATA_2__and0001(fpga_inst/DATA_2__and00011:O)                     | NONE(fpga_inst/DATA_2)                                         | 1     |
+fpga_inst/DATA_30__and0000(fpga_inst/DATA_30__and00001:O)                   | NONE(fpga_inst/DATA_30)                                        | 1     |
+fpga_inst/DATA_30__and0001(fpga_inst/DATA_30__and00011:O)                   | NONE(fpga_inst/DATA_30)                                        | 1     |
+fpga_inst/DATA_31__and0000(fpga_inst/DATA_31__and00001:O)                   | NONE(fpga_inst/DATA_31)                                        | 1     |
+fpga_inst/DATA_31__and0001(fpga_inst/DATA_31__and00011:O)                   | NONE(fpga_inst/DATA_31)                                        | 1     |
+fpga_inst/DATA_32__and0000(fpga_inst/DATA_32__and00001:O)                   | NONE(fpga_inst/DATA_32)                                        | 1     |
+fpga_inst/DATA_32__and0001(fpga_inst/DATA_32__and00011:O)                   | NONE(fpga_inst/DATA_32)                                        | 1     |
+fpga_inst/DATA_33__and0000(fpga_inst/DATA_33__and00001:O)                   | NONE(fpga_inst/DATA_33)                                        | 1     |
+fpga_inst/DATA_33__and0001(fpga_inst/DATA_33__and00011:O)                   | NONE(fpga_inst/DATA_33)                                        | 1     |
+fpga_inst/DATA_34__and0000(fpga_inst/DATA_34__and00001:O)                   | NONE(fpga_inst/DATA_34)                                        | 1     |
+fpga_inst/DATA_34__and0001(fpga_inst/DATA_34__and00011:O)                   | NONE(fpga_inst/DATA_34)                                        | 1     |
+fpga_inst/DATA_35__and0000(fpga_inst/DATA_35__and00001:O)                   | NONE(fpga_inst/DATA_35)                                        | 1     |
+fpga_inst/DATA_35__and0001(fpga_inst/DATA_35__and00011:O)                   | NONE(fpga_inst/DATA_35)                                        | 1     |
+fpga_inst/DATA_36__and0000(fpga_inst/DATA_36__and00001:O)                   | NONE(fpga_inst/DATA_36)                                        | 1     |
+fpga_inst/DATA_36__and0001(fpga_inst/DATA_36__and00011:O)                   | NONE(fpga_inst/DATA_36)                                        | 1     |
+fpga_inst/DATA_37__and0000(fpga_inst/DATA_37__and00001:O)                   | NONE(fpga_inst/DATA_37)                                        | 1     |
+fpga_inst/DATA_37__and0001(fpga_inst/DATA_37__and00011:O)                   | NONE(fpga_inst/DATA_37)                                        | 1     |
+fpga_inst/DATA_38__and0000(fpga_inst/DATA_38__and00001:O)                   | NONE(fpga_inst/DATA_38)                                        | 1     |
+fpga_inst/DATA_38__and0001(fpga_inst/DATA_38__and00011:O)                   | NONE(fpga_inst/DATA_38)                                        | 1     |
+fpga_inst/DATA_39__and0000(fpga_inst/DATA_39__and00001:O)                   | NONE(fpga_inst/DATA_39)                                        | 1     |
+fpga_inst/DATA_39__and0001(fpga_inst/DATA_39__and00011:O)                   | NONE(fpga_inst/DATA_39)                                        | 1     |
+fpga_inst/DATA_3__and0000(fpga_inst/DATA_3__and00001:O)                     | NONE(fpga_inst/DATA_3)                                         | 1     |
+fpga_inst/DATA_3__and0001(fpga_inst/DATA_3__and00011:O)                     | NONE(fpga_inst/DATA_3)                                         | 1     |
+fpga_inst/DATA_40__and0000(fpga_inst/DATA_40__and00001:O)                   | NONE(fpga_inst/DATA_40)                                        | 1     |
+fpga_inst/DATA_40__and0001(fpga_inst/DATA_40__and00011:O)                   | NONE(fpga_inst/DATA_40)                                        | 1     |
+fpga_inst/DATA_41__and0000(fpga_inst/DATA_41__and00001:O)                   | NONE(fpga_inst/DATA_41)                                        | 1     |
+fpga_inst/DATA_41__and0001(fpga_inst/DATA_41__and00011:O)                   | NONE(fpga_inst/DATA_41)                                        | 1     |
+fpga_inst/DATA_42__and0000(fpga_inst/DATA_42__and00001:O)                   | NONE(fpga_inst/DATA_42)                                        | 1     |
+fpga_inst/DATA_42__and0001(fpga_inst/DATA_42__and00011:O)                   | NONE(fpga_inst/DATA_42)                                        | 1     |
+fpga_inst/DATA_43__and0000(fpga_inst/DATA_43__and00001:O)                   | NONE(fpga_inst/DATA_43)                                        | 1     |
+fpga_inst/DATA_43__and0001(fpga_inst/DATA_43__and00011:O)                   | NONE(fpga_inst/DATA_43)                                        | 1     |
+fpga_inst/DATA_44__and0000(fpga_inst/DATA_44__and00001:O)                   | NONE(fpga_inst/DATA_44)                                        | 1     |
+fpga_inst/DATA_44__and0001(fpga_inst/DATA_44__and00011:O)                   | NONE(fpga_inst/DATA_44)                                        | 1     |
+fpga_inst/DATA_45__and0000(fpga_inst/DATA_45__and00001:O)                   | NONE(fpga_inst/DATA_45)                                        | 1     |
+fpga_inst/DATA_45__and0001(fpga_inst/DATA_45__and00011:O)                   | NONE(fpga_inst/DATA_45)                                        | 1     |
+fpga_inst/DATA_46__and0000(fpga_inst/DATA_46__and00001:O)                   | NONE(fpga_inst/DATA_46)                                        | 1     |
+fpga_inst/DATA_46__and0001(fpga_inst/DATA_46__and00011:O)                   | NONE(fpga_inst/DATA_46)                                        | 1     |
+fpga_inst/DATA_47__and0000(fpga_inst/DATA_47__and00001:O)                   | NONE(fpga_inst/DATA_47)                                        | 1     |
+fpga_inst/DATA_47__and0001(fpga_inst/DATA_47__and00011:O)                   | NONE(fpga_inst/DATA_47)                                        | 1     |
+fpga_inst/DATA_48__and0000(fpga_inst/DATA_48__and00001:O)                   | NONE(fpga_inst/DATA_48)                                        | 1     |
+fpga_inst/DATA_48__and0001(fpga_inst/DATA_48__and00011:O)                   | NONE(fpga_inst/DATA_48)                                        | 1     |
+fpga_inst/DATA_49__and0000(fpga_inst/DATA_49__and00001:O)                   | NONE(fpga_inst/DATA_49)                                        | 1     |
+fpga_inst/DATA_49__and0001(fpga_inst/DATA_49__and00011:O)                   | NONE(fpga_inst/DATA_49)                                        | 1     |
+fpga_inst/DATA_4__and0000(fpga_inst/DATA_4__and00001:O)                     | NONE(fpga_inst/DATA_4)                                         | 1     |
+fpga_inst/DATA_4__and0001(fpga_inst/DATA_4__and00011:O)                     | NONE(fpga_inst/DATA_4)                                         | 1     |
+fpga_inst/DATA_50__and0000(fpga_inst/DATA_50__and00001:O)                   | NONE(fpga_inst/DATA_50)                                        | 1     |
+fpga_inst/DATA_50__and0001(fpga_inst/DATA_50__and00011:O)                   | NONE(fpga_inst/DATA_50)                                        | 1     |
+fpga_inst/DATA_51__and0000(fpga_inst/DATA_51__and00001:O)                   | NONE(fpga_inst/DATA_51)                                        | 1     |
+fpga_inst/DATA_51__and0001(fpga_inst/DATA_51__and00011:O)                   | NONE(fpga_inst/DATA_51)                                        | 1     |
+fpga_inst/DATA_52__and0000(fpga_inst/DATA_52__and00001:O)                   | NONE(fpga_inst/DATA_52)                                        | 1     |
+fpga_inst/DATA_52__and0001(fpga_inst/DATA_52__and00011:O)                   | NONE(fpga_inst/DATA_52)                                        | 1     |
+fpga_inst/DATA_53__and0000(fpga_inst/DATA_53__and00001:O)                   | NONE(fpga_inst/DATA_53)                                        | 1     |
+fpga_inst/DATA_53__and0001(fpga_inst/DATA_53__and00011:O)                   | NONE(fpga_inst/DATA_53)                                        | 1     |
+fpga_inst/DATA_54__and0000(fpga_inst/DATA_54__and00001:O)                   | NONE(fpga_inst/DATA_54)                                        | 1     |
+fpga_inst/DATA_54__and0001(fpga_inst/DATA_54__and00011:O)                   | NONE(fpga_inst/DATA_54)                                        | 1     |
+fpga_inst/DATA_55__and0000(fpga_inst/DATA_55__and00001:O)                   | NONE(fpga_inst/DATA_55)                                        | 1     |
+fpga_inst/DATA_55__and0001(fpga_inst/DATA_55__and00011:O)                   | NONE(fpga_inst/DATA_55)                                        | 1     |
+fpga_inst/DATA_56__and0000(fpga_inst/DATA_56__and00001:O)                   | NONE(fpga_inst/DATA_56)                                        | 1     |
+fpga_inst/DATA_56__and0001(fpga_inst/DATA_56__and00011:O)                   | NONE(fpga_inst/DATA_56)                                        | 1     |
+fpga_inst/DATA_57__and0000(fpga_inst/DATA_57__and00001:O)                   | NONE(fpga_inst/DATA_57)                                        | 1     |
+fpga_inst/DATA_57__and0001(fpga_inst/DATA_57__and00011:O)                   | NONE(fpga_inst/DATA_57)                                        | 1     |
+fpga_inst/DATA_58__and0000(fpga_inst/DATA_58__and00001:O)                   | NONE(fpga_inst/DATA_58)                                        | 1     |
+fpga_inst/DATA_58__and0001(fpga_inst/DATA_58__and00011:O)                   | NONE(fpga_inst/DATA_58)                                        | 1     |
+fpga_inst/DATA_59__and0000(fpga_inst/DATA_59__and00001:O)                   | NONE(fpga_inst/DATA_59)                                        | 1     |
+fpga_inst/DATA_59__and0001(fpga_inst/DATA_59__and00011:O)                   | NONE(fpga_inst/DATA_59)                                        | 1     |
+fpga_inst/DATA_5__and0000(fpga_inst/DATA_5__and00001:O)                     | NONE(fpga_inst/DATA_5)                                         | 1     |
+fpga_inst/DATA_5__and0001(fpga_inst/DATA_5__and00011:O)                     | NONE(fpga_inst/DATA_5)                                         | 1     |
+fpga_inst/DATA_60__and0000(fpga_inst/DATA_60__and00001:O)                   | NONE(fpga_inst/DATA_60)                                        | 1     |
+fpga_inst/DATA_60__and0001(fpga_inst/DATA_60__and00011:O)                   | NONE(fpga_inst/DATA_60)                                        | 1     |
+fpga_inst/DATA_61__and0000(fpga_inst/DATA_61__and00001:O)                   | NONE(fpga_inst/DATA_61)                                        | 1     |
+fpga_inst/DATA_61__and0001(fpga_inst/DATA_61__and00011:O)                   | NONE(fpga_inst/DATA_61)                                        | 1     |
+fpga_inst/DATA_62__and0000(fpga_inst/DATA_62__and00001:O)                   | NONE(fpga_inst/DATA_62)                                        | 1     |
+fpga_inst/DATA_62__and0001(fpga_inst/DATA_62__and00011:O)                   | NONE(fpga_inst/DATA_62)                                        | 1     |
+fpga_inst/DATA_63__and0000(fpga_inst/DATA_63__and00001:O)                   | NONE(fpga_inst/DATA_63)                                        | 1     |
+fpga_inst/DATA_63__and0001(fpga_inst/DATA_63__and00011:O)                   | NONE(fpga_inst/DATA_63)                                        | 1     |
+fpga_inst/DATA_64__and0000(fpga_inst/DATA_64__and00001:O)                   | NONE(fpga_inst/DATA_64)                                        | 1     |
+fpga_inst/DATA_64__and0001(fpga_inst/DATA_64__and00011:O)                   | NONE(fpga_inst/DATA_64)                                        | 1     |
+fpga_inst/DATA_65__and0000(fpga_inst/DATA_65__and00001:O)                   | NONE(fpga_inst/DATA_65)                                        | 1     |
+fpga_inst/DATA_65__and0001(fpga_inst/DATA_65__and00011:O)                   | NONE(fpga_inst/DATA_65)                                        | 1     |
+fpga_inst/DATA_66__and0000(fpga_inst/DATA_66__and00001:O)                   | NONE(fpga_inst/DATA_66)                                        | 1     |
+fpga_inst/DATA_66__and0001(fpga_inst/DATA_66__and00011:O)                   | NONE(fpga_inst/DATA_66)                                        | 1     |
+fpga_inst/DATA_67__and0000(fpga_inst/DATA_67__and00001:O)                   | NONE(fpga_inst/DATA_67)                                        | 1     |
+fpga_inst/DATA_67__and0001(fpga_inst/DATA_67__and00011:O)                   | NONE(fpga_inst/DATA_67)                                        | 1     |
+fpga_inst/DATA_68__and0000(fpga_inst/DATA_68__and00001:O)                   | NONE(fpga_inst/DATA_68)                                        | 1     |
+fpga_inst/DATA_68__and0001(fpga_inst/DATA_68__and00011:O)                   | NONE(fpga_inst/DATA_68)                                        | 1     |
+fpga_inst/DATA_69__and0000(fpga_inst/DATA_69__and00001:O)                   | NONE(fpga_inst/DATA_69)                                        | 1     |
+fpga_inst/DATA_69__and0001(fpga_inst/DATA_69__and00011:O)                   | NONE(fpga_inst/DATA_69)                                        | 1     |
+fpga_inst/DATA_6__and0000(fpga_inst/DATA_6__and00001:O)                     | NONE(fpga_inst/DATA_6)                                         | 1     |
+fpga_inst/DATA_6__and0001(fpga_inst/DATA_6__and00011:O)                     | NONE(fpga_inst/DATA_6)                                         | 1     |
+fpga_inst/DATA_70__and0000(fpga_inst/DATA_70__and00001:O)                   | NONE(fpga_inst/DATA_70)                                        | 1     |
+fpga_inst/DATA_70__and0001(fpga_inst/DATA_70__and00011:O)                   | NONE(fpga_inst/DATA_70)                                        | 1     |
+fpga_inst/DATA_71__and0000(fpga_inst/DATA_71__and00001:O)                   | NONE(fpga_inst/DATA_71)                                        | 1     |
+fpga_inst/DATA_71__and0001(fpga_inst/DATA_71__and00011:O)                   | NONE(fpga_inst/DATA_71)                                        | 1     |
+fpga_inst/DATA_72__and0000(fpga_inst/DATA_72__and00001:O)                   | NONE(fpga_inst/DATA_72)                                        | 1     |
+fpga_inst/DATA_72__and0001(fpga_inst/DATA_72__and00011:O)                   | NONE(fpga_inst/DATA_72)                                        | 1     |
+fpga_inst/DATA_73__and0000(fpga_inst/DATA_73__and00001:O)                   | NONE(fpga_inst/DATA_73)                                        | 1     |
+fpga_inst/DATA_73__and0001(fpga_inst/DATA_73__and00011:O)                   | NONE(fpga_inst/DATA_73)                                        | 1     |
+fpga_inst/DATA_74__and0000(fpga_inst/DATA_74__and00001:O)                   | NONE(fpga_inst/DATA_74)                                        | 1     |
+fpga_inst/DATA_74__and0001(fpga_inst/DATA_74__and00011:O)                   | NONE(fpga_inst/DATA_74)                                        | 1     |
+fpga_inst/DATA_75__and0000(fpga_inst/DATA_75__and00001:O)                   | NONE(fpga_inst/DATA_75)                                        | 1     |
+fpga_inst/DATA_75__and0001(fpga_inst/DATA_75__and00011:O)                   | NONE(fpga_inst/DATA_75)                                        | 1     |
+fpga_inst/DATA_76__and0000(fpga_inst/DATA_76__and00001:O)                   | NONE(fpga_inst/DATA_76)                                        | 1     |
+fpga_inst/DATA_76__and0001(fpga_inst/DATA_76__and00011:O)                   | NONE(fpga_inst/DATA_76)                                        | 1     |
+fpga_inst/DATA_77__and0000(fpga_inst/DATA_77__and00001:O)                   | NONE(fpga_inst/DATA_77)                                        | 1     |
+fpga_inst/DATA_77__and0001(fpga_inst/DATA_77__and00011:O)                   | NONE(fpga_inst/DATA_77)                                        | 1     |
+fpga_inst/DATA_78__and0000(fpga_inst/DATA_78__and00001:O)                   | NONE(fpga_inst/DATA_78)                                        | 1     |
+fpga_inst/DATA_78__and0001(fpga_inst/DATA_78__and00011:O)                   | NONE(fpga_inst/DATA_78)                                        | 1     |
+fpga_inst/DATA_79__and0000(fpga_inst/DATA_79__and00001:O)                   | NONE(fpga_inst/DATA_79)                                        | 1     |
+fpga_inst/DATA_79__and0001(fpga_inst/DATA_79__and00011:O)                   | NONE(fpga_inst/DATA_79)                                        | 1     |
+fpga_inst/DATA_7__and0000(fpga_inst/DATA_7__and00001:O)                     | NONE(fpga_inst/DATA_7)                                         | 1     |
+fpga_inst/DATA_7__and0001(fpga_inst/DATA_7__and00011:O)                     | NONE(fpga_inst/DATA_7)                                         | 1     |
+fpga_inst/DATA_80__and0000(fpga_inst/DATA_80__and00001:O)                   | NONE(fpga_inst/DATA_80)                                        | 1     |
+fpga_inst/DATA_80__and0001(fpga_inst/DATA_80__and00011:O)                   | NONE(fpga_inst/DATA_80)                                        | 1     |
+fpga_inst/DATA_81__and0000(fpga_inst/DATA_81__and00001:O)                   | NONE(fpga_inst/DATA_81)                                        | 1     |
+fpga_inst/DATA_81__and0001(fpga_inst/DATA_81__and00011:O)                   | NONE(fpga_inst/DATA_81)                                        | 1     |
+fpga_inst/DATA_82__and0000(fpga_inst/DATA_82__and00001:O)                   | NONE(fpga_inst/DATA_82)                                        | 1     |
+fpga_inst/DATA_82__and0001(fpga_inst/DATA_82__and00011:O)                   | NONE(fpga_inst/DATA_82)                                        | 1     |
+fpga_inst/DATA_83__and0000(fpga_inst/DATA_83__and00001:O)                   | NONE(fpga_inst/DATA_83)                                        | 1     |
+fpga_inst/DATA_83__and0001(fpga_inst/DATA_83__and00011:O)                   | NONE(fpga_inst/DATA_83)                                        | 1     |
+fpga_inst/DATA_84__and0000(fpga_inst/DATA_84__and00001:O)                   | NONE(fpga_inst/DATA_84)                                        | 1     |
+fpga_inst/DATA_84__and0001(fpga_inst/DATA_84__and00011:O)                   | NONE(fpga_inst/DATA_84)                                        | 1     |
+fpga_inst/DATA_85__and0000(fpga_inst/DATA_85__and00001:O)                   | NONE(fpga_inst/DATA_85)                                        | 1     |
+fpga_inst/DATA_85__and0001(fpga_inst/DATA_85__and00011:O)                   | NONE(fpga_inst/DATA_85)                                        | 1     |
+fpga_inst/DATA_86__and0000(fpga_inst/DATA_86__and00001:O)                   | NONE(fpga_inst/DATA_86)                                        | 1     |
+fpga_inst/DATA_86__and0001(fpga_inst/DATA_86__and00011:O)                   | NONE(fpga_inst/DATA_86)                                        | 1     |
+fpga_inst/DATA_87__and0000(fpga_inst/DATA_87__and00001:O)                   | NONE(fpga_inst/DATA_87)                                        | 1     |
+fpga_inst/DATA_87__and0001(fpga_inst/DATA_87__and00011:O)                   | NONE(fpga_inst/DATA_87)                                        | 1     |
+fpga_inst/DATA_88__and0000(fpga_inst/DATA_88__and00001:O)                   | NONE(fpga_inst/DATA_88)                                        | 1     |
+fpga_inst/DATA_88__and0001(fpga_inst/DATA_88__and00011:O)                   | NONE(fpga_inst/DATA_88)                                        | 1     |
+fpga_inst/DATA_89__and0000(fpga_inst/DATA_89__and00001:O)                   | NONE(fpga_inst/DATA_89)                                        | 1     |
+fpga_inst/DATA_89__and0001(fpga_inst/DATA_89__and00011:O)                   | NONE(fpga_inst/DATA_89)                                        | 1     |
+fpga_inst/DATA_8__and0000(fpga_inst/DATA_8__and00001:O)                     | NONE(fpga_inst/DATA_8)                                         | 1     |
+fpga_inst/DATA_8__and0001(fpga_inst/DATA_8__and00011:O)                     | NONE(fpga_inst/DATA_8)                                         | 1     |
+fpga_inst/DATA_90__and0000(fpga_inst/DATA_90__and00001:O)                   | NONE(fpga_inst/DATA_90)                                        | 1     |
+fpga_inst/DATA_90__and0001(fpga_inst/DATA_90__and00011:O)                   | NONE(fpga_inst/DATA_90)                                        | 1     |
+fpga_inst/DATA_91__and0000(fpga_inst/DATA_91__and00001:O)                   | NONE(fpga_inst/DATA_91)                                        | 1     |
+fpga_inst/DATA_91__and0001(fpga_inst/DATA_91__and00011:O)                   | NONE(fpga_inst/DATA_91)                                        | 1     |
+fpga_inst/DATA_92__and0000(fpga_inst/DATA_92__and00001:O)                   | NONE(fpga_inst/DATA_92)                                        | 1     |
+fpga_inst/DATA_92__and0001(fpga_inst/DATA_92__and00011:O)                   | NONE(fpga_inst/DATA_92)                                        | 1     |
+fpga_inst/DATA_93__and0000(fpga_inst/DATA_93__and00001:O)                   | NONE(fpga_inst/DATA_93)                                        | 1     |
+fpga_inst/DATA_93__and0001(fpga_inst/DATA_93__and00011:O)                   | NONE(fpga_inst/DATA_93)                                        | 1     |
+fpga_inst/DATA_94__and0000(fpga_inst/DATA_94__and00001:O)                   | NONE(fpga_inst/DATA_94)                                        | 1     |
+fpga_inst/DATA_94__and0001(fpga_inst/DATA_94__and00011:O)                   | NONE(fpga_inst/DATA_94)                                        | 1     |
+fpga_inst/DATA_95__and0000(fpga_inst/DATA_95__and00001:O)                   | NONE(fpga_inst/DATA_95)                                        | 1     |
+fpga_inst/DATA_95__and0001(fpga_inst/DATA_95__and00011:O)                   | NONE(fpga_inst/DATA_95)                                        | 1     |
+fpga_inst/DATA_96__and0000(fpga_inst/DATA_96__and00001:O)                   | NONE(fpga_inst/DATA_96)                                        | 1     |
+fpga_inst/DATA_96__and0001(fpga_inst/DATA_96__and00011:O)                   | NONE(fpga_inst/DATA_96)                                        | 1     |
+fpga_inst/DATA_97__and0000(fpga_inst/DATA_97__and00001:O)                   | NONE(fpga_inst/DATA_97)                                        | 1     |
+fpga_inst/DATA_97__and0001(fpga_inst/DATA_97__and00011:O)                   | NONE(fpga_inst/DATA_97)                                        | 1     |
+fpga_inst/DATA_98__and0000(fpga_inst/DATA_98__and00001:O)                   | NONE(fpga_inst/DATA_98)                                        | 1     |
+fpga_inst/DATA_98__and0001(fpga_inst/DATA_98__and00011:O)                   | NONE(fpga_inst/DATA_98)                                        | 1     |
+fpga_inst/DATA_99__and0000(fpga_inst/DATA_99__and00001:O)                   | NONE(fpga_inst/DATA_99)                                        | 1     |
+fpga_inst/DATA_99__and0001(fpga_inst/DATA_99__and00011:O)                   | NONE(fpga_inst/DATA_99)                                        | 1     |
+fpga_inst/DATA_9__and0000(fpga_inst/DATA_9__and00001:O)                     | NONE(fpga_inst/DATA_9)                                         | 1     |
+fpga_inst/DATA_9__and0001(fpga_inst/DATA_9__and00011:O)                     | NONE(fpga_inst/DATA_9)                                         | 1     |
+fpga_inst/dis/R_temp_0_and0000(fpga_inst/dis/R_temp_0_and00001:O)           | NONE(fpga_inst/dis/R_temp_0)                                   | 1     |
+fpga_inst/dis/R_temp_0_and0001(fpga_inst/dis/R_temp_0_and00011:O)           | NONE(fpga_inst/dis/R_temp_0)                                   | 1     |
+fpga_inst/dis/R_temp_1_and0000(fpga_inst/dis/R_temp_1_and00001:O)           | NONE(fpga_inst/dis/R_temp_1)                                   | 1     |
+fpga_inst/dis/R_temp_1_and0001(fpga_inst/dis/R_temp_1_and00011:O)           | NONE(fpga_inst/dis/R_temp_1)                                   | 1     |
+fpga_inst/dis/R_temp_2_and0000(fpga_inst/dis/R_temp_2_and00001:O)           | NONE(fpga_inst/dis/R_temp_2)                                   | 1     |
+fpga_inst/dis/R_temp_2_and0001(fpga_inst/dis/R_temp_2_and00011:O)           | NONE(fpga_inst/dis/R_temp_2)                                   | 1     |
+fpga_inst/dis/R_temp_3_and0000(fpga_inst/dis/R_temp_3_and00001:O)           | NONE(fpga_inst/dis/R_temp_3)                                   | 1     |
+fpga_inst/dis/R_temp_3_and0001(fpga_inst/dis/R_temp_3_and00011:O)           | NONE(fpga_inst/dis/R_temp_3)                                   | 1     |
+fpga_inst/dis/R_temp_4_and0000(fpga_inst/dis/R_temp_4_and00001:O)           | NONE(fpga_inst/dis/R_temp_4)                                   | 1     |
+fpga_inst/dis/R_temp_4_and0001(fpga_inst/dis/R_temp_4_and00011:O)           | NONE(fpga_inst/dis/R_temp_4)                                   | 1     |
+fpga_inst/dis/R_temp_5_and0000(fpga_inst/dis/R_temp_5_and00001:O)           | NONE(fpga_inst/dis/R_temp_5)                                   | 1     |
+fpga_inst/dis/R_temp_5_and0001(fpga_inst/dis/R_temp_5_and00011:O)           | NONE(fpga_inst/dis/R_temp_5)                                   | 1     |
+fpga_inst/dis/R_temp_6_and0000(fpga_inst/dis/R_temp_6_and00001:O)           | NONE(fpga_inst/dis/R_temp_6)                                   | 1     |
+fpga_inst/dis/R_temp_6_and0001(fpga_inst/dis/R_temp_6_and00011:O)           | NONE(fpga_inst/dis/R_temp_6)                                   | 1     |
+fpga_inst/dis/R_temp_7_and0000(fpga_inst/dis/R_temp_7_and00001:O)           | NONE(fpga_inst/dis/R_temp_7)                                   | 1     |
+fpga_inst/dis/R_temp_7_and0001(fpga_inst/dis/R_temp_7_and00011:O)           | NONE(fpga_inst/dis/R_temp_7)                                   | 1     |
+----------------------------------------------------------------------------+----------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 34.573ns (Maximum Frequency: 28.925MHz)
+   Minimum input arrival time before clock: 16.088ns
+   Maximum output required time after clock: 8.836ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SMCLK'
+  Clock period: 34.573ns (frequency: 28.925MHz)
+  Total number of paths / destination ports: 8712 / 610
+-------------------------------------------------------------------------
+Delay:               9.680ns (Levels of Logic = 4)
+  Source:            fpga_inst/frame_counter_3 (FF)
+  Destination:       fpga_inst/DATA_119 (FF)
+  Source Clock:      SMCLK rising 3.6X
+  Destination Clock: SMCLK rising 3.6X
+
+  Data Path: fpga_inst/frame_counter_3 to fpga_inst/DATA_119
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.720   1.246  fpga_inst/frame_counter_3 (fpga_inst/frame_counter_3)
+     LUT4:I0->O            8   0.551   1.109  fpga_inst/CURR_DIR_0_cmp_lt00001 (fpga_inst/CURR_DIR_0_cmp_lt00001)
+     LUT4:I3->O           66   0.551   2.116  fpga_inst/DATA_mux0005<103>11 (N19)
+     LUT4_D:I2->O         38   0.551   2.082  fpga_inst/DATA_mux0005<103>12 (N01)
+     LUT2:I1->O            1   0.551   0.000  fpga_inst/DATA_mux0005<93>1 (fpga_inst/DATA_mux0005<93>)
+     FDCPE:D                   0.203          fpga_inst/DATA_93
+    ----------------------------------------
+    Total                      9.680ns (3.127ns logic, 6.553ns route)
+                                       (32.3% logic, 67.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SMCLK'
+  Total number of paths / destination ports: 559 / 261
+-------------------------------------------------------------------------
+Offset:              16.088ns (Levels of Logic = 6)
+  Source:            P3M<0> (PAD)
+  Destination:       fpga_inst/DATA_119 (FF)
+  Destination Clock: SMCLK rising 3.6X
+
+  Data Path: P3M<0> to fpga_inst/DATA_119
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O         274   0.821   3.434  P3M_0_IOBUF (N68)
+     LUT2:I1->O          314   0.551   3.808  reset1 (fpga_inst/x_cell[0].y_cell[0].instance_cell/CURRENT_STATE__and0000)
+     LUT4:I0->O            1   0.551   0.869  fpga_inst/DATA_mux0005<103>11_SW1 (N150)
+     LUT4:I2->O           66   0.551   2.116  fpga_inst/DATA_mux0005<103>11 (N19)
+     LUT4_D:I2->O         38   0.551   2.082  fpga_inst/DATA_mux0005<103>12 (N01)
+     LUT2:I1->O            1   0.551   0.000  fpga_inst/DATA_mux0005<93>1 (fpga_inst/DATA_mux0005<93>)
+     FDCPE:D                   0.203          fpga_inst/DATA_93
+    ----------------------------------------
+    Total                     16.088ns (3.779ns logic, 12.309ns route)
+                                       (23.5% logic, 76.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SMCLK'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              8.836ns (Levels of Logic = 2)
+  Source:            spictrl/pstate_FSM_FFd1 (FF)
+  Destination:       SPI_DI (PAD)
+  Source Clock:      SMCLK rising 3.6X
+
+  Data Path: spictrl/pstate_FSM_FFd1 to SPI_DI
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.720   0.877  spictrl/pstate_FSM_FFd1 (spictrl/pstate_FSM_FFd1)
+     INV:I->O              1   0.551   0.801  spictrl/devsel_inv1_INV_0 (spictrl/devsel_inv)
+     OBUFT:T->O                5.887          SPI_DI_OBUFT (SPI_DI)
+    ----------------------------------------
+    Total                      8.836ns (7.158ns logic, 1.678ns route)
+                                       (81.0% logic, 19.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 26.20 secs
+ 
+--> 
+
+Total memory usage is 161368 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  114 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

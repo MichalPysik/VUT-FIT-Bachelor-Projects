@@ -1,0 +1,66 @@
+Running: c:\XilinxISE\bin\nt\unwrapped\fuse.exe -intstyle ise --timeprecision_vhdl 1ps -incremental -o proj3_isim -prj proj3_isim.prj testbench 
+ISim O.40d (signature 0x79f3f3a8)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "../../../../../fpga/units/clkgen/clkgen_config.vhd" into library work
+Parsing VHDL file "proj3_config.vhd" into library work
+Parsing VHDL file "../../../../../fpga/units/clkgen/clkgen.vhd" into library work
+Parsing VHDL file "../../../../../fpga/units/math/math_pack.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_adc_entity.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_adc.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_adc_autoincr.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_reg.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_ctrl.vhd" into library work
+Parsing VHDL file "../../../../../fpga/chips/fpga_xc3s50.vhd" into library work
+Parsing VHDL file "../../../../../fpga/chips/architecture_gp/arch_gp_ifc.vhd" into library work
+Parsing VHDL file "../../../../../fpga/chips/architecture_gp/tlv_gp_ifc.vhd" into library work
+Parsing VHDL file "../../fpga/matrix_pack.vhd" into library work
+Parsing VHDL file "../../fpga/counter.vhd" into library work
+Parsing VHDL file "../../fpga/display.vhd" into library work
+Parsing VHDL file "../../fpga/cell.vhd" into library work
+Parsing VHDL file "../../fpga/top.vhd" into library work
+Parsing VHDL file "../../fpga/sim/counter_tb.vhd" into library work
+Parsing VHDL file "../../fpga/sim/display_tb.vhd" into library work
+Parsing VHDL file "../../fpga/sim/matrix_pack_tb.vhd" into library work
+Parsing VHDL file "../../fpga/sim/tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 71128 KB
+Fuse CPU Usage: 761 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Using precompiled package textio from library std
+Using precompiled package std_logic_textio from library ieee
+Using precompiled package numeric_std from library ieee
+Using precompiled package vital_timing from library ieee
+Using precompiled package vital_primitives from library ieee
+Using precompiled package std_logic_signed from library ieee
+Compiling package clkgen_cfg
+Compiling package fpga_cfg
+Compiling package vcomponents
+Compiling package vpkg
+Compiling architecture bufg_v of entity bufg [bufg_default]
+Compiling architecture ibufg_v of entity ibufg [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture dcm_clock_divide_by_2_v of entity dcm_clock_divide_by_2 [dcm_clock_divide_by_2_default]
+Compiling architecture dcm_maximum_period_check_v of entity dcm_maximum_period_check [\dcm_maximum_period_check("CLKIN...]
+Compiling architecture dcm_maximum_period_check_v of entity dcm_maximum_period_check [\dcm_maximum_period_check("PSCLK...]
+Compiling architecture dcm_clock_lost_v of entity dcm_clock_lost [dcm_clock_lost_default]
+Compiling architecture dcm_v of entity dcm [\DCM(2.0,7,25,false,135.634,"NON...]
+Compiling architecture behavioral of entity clkgen [\clkgen(dcm_25mhz,true)\]
+Compiling architecture arch_spi_ctrl2 of entity spi_ctrl [spi_ctrl_default]
+Compiling package matrix_pack
+Compiling architecture behavioral of entity counter [\counter(25000000,1600)\]
+Compiling architecture behv of entity display [display_default]
+Compiling architecture behavioral of entity counter [\counter(25000000,8)\]
+Compiling architecture behavioral of entity cell [cell_default]
+Compiling architecture main of entity tlv_gp_ifc [tlv_gp_ifc_default]
+Compiling architecture arch_gp_ifc of entity fpga [fpga_default]
+Compiling architecture behavioral of entity testbench
+Time Resolution for simulation is 1ps.
+Compiled 46 VHDL Units
+Built simulation executable proj3_isim.exe
+Fuse Memory Usage: 87644 KB
+Fuse CPU Usage: 991 ms

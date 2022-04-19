@@ -1,0 +1,1 @@
+/usr/bin/c++   -g -O0 -fprofile-arcs -ftest-coverage -std=c++11  -rdynamic CMakeFiles/black_box_test.dir/black_box_tests.cpp.o  -o black_box_test ../libs/libblack_box_lib.a lib/libgtest_main.a lib/libgtest.a -lpthread 

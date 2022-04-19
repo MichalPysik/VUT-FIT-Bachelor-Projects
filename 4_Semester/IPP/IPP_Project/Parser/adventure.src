@@ -1,0 +1,7 @@
+.IPPcode21
+
+LABEL ahoj
+CALL ahoj
+JUMPIFNEQ end GF@a LF@b
+RETURN
+JUMP egg

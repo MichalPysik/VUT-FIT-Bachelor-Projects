@@ -1,0 +1,374 @@
+/* ITW Projekt 1 */
+/* Vypracoval: Michal Pysik (login: xpysik00) */
+
+body {
+	font-family: Merriweather;
+	font-size: 14px;
+	color: #898989;
+	line-height: 1.7;
+	background-color: white;
+	margin: 0px;
+}
+
+
+/* samotnou velikost stranky a okraje nastavujeme zde */
+.content {
+	min-width: 768px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	column-gap: 40px;
+	height: inherit;
+	max-height: inherit;
+}
+
+
+/* odkazy */
+a {
+	color: steelblue;
+	text-decoration: none;
+}
+
+/* odkazy hover */
+a:hover {
+	color: black;
+}
+
+
+
+/* navigation */
+#navigation {
+	height: 42px;
+	margin: 20px 0;
+	font-family: Montserrat;
+}
+
+#nav-logo {
+	height: inherit;
+	float: left;
+}
+
+#nav-logo a {
+	font-weight: 700;
+	font-size: 25px;
+	color: black;
+}
+
+#nav-menu {
+	height: inherit;
+	line-height: 42px;
+	float: right
+}
+
+#nav-menu ul {
+	margin: auto;
+}
+
+#nav-menu li {
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 13px;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+}
+
+#nav-menu a:not(:hover) {
+	color: #bfbfbf;
+}
+
+
+
+/* header */
+#header {
+	margin: 0;
+	padding: 0;
+	max-height: 634px;
+}
+
+#header img {
+	max-width: 100%;
+	height: auto;
+}
+
+#header h1 {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 32px;
+	color: white;
+	padding: 0 0 20px 20px;
+	position: relative;
+	bottom: 95px;
+	height: 0; /* potreba aby nebyl header mnohem vyssi nez samotny obrazek */
+}
+
+
+
+/* about */
+#about {
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+#about h2 {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 40px;
+	text-align: center;
+	color: #4d4d4d;
+}
+
+#about p {
+	text-align: center;
+	font-size: 18px; /* v zadani je 13, podle obrazku by mohlo byt vsak 18 */
+}
+
+#about h3 {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 24px;
+	color: #4d4d4d;
+	margin-bottom: 0;
+}
+
+#about .content div {
+	column-count: 3;
+	column-gap: inherit;
+}
+
+#about .content p {
+	padding-bottom: 25px;
+}
+
+#about .about-item {
+	display: grid;
+}
+
+#about .about-item img {
+	width: 100%;
+	height: auto;
+}
+
+#about .about-item p {
+	margin: 0;
+	text-align: left;
+	color: #bfbfbf;
+	padding-bottom: 0;
+}
+
+
+
+/* middle-sections */
+#middle-sections {
+	padding-top: 40px;
+	padding-bottom: 100px;
+	background-color: whitesmoke;
+}
+
+#middle-sections h2 {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 32px;
+	color: #4d4d4d;
+	margin-top: 0;
+}
+
+#middle-sections h3 {
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#middle-sections .content {
+	display: grid;
+	grid-template-columns: 3fr 2fr; /* prvni sloupec zabira 3/5 */
+}
+
+
+/* m-s news */
+#news {
+}
+
+.news-item {
+	border-bottom: 1px solid #e3e3e3;
+	margin: 20px 0;
+}
+
+.news-item p {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.news-date {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #bfbfbf
+}
+
+#news #news-btn {
+	padding-top: 10px;
+}
+
+#news #news-btn a {
+	font-family: Montserrat;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	background-color: lightsteelblue;
+	padding: 12px 18px;
+}
+
+
+/* m-s references */
+#references img {
+	width: 120px;
+	height: auto;
+	float: left;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+
+#references blockquote {
+	text-align: left;
+	font-style: italic;
+	font-size: 18px; /* v zadani je zas napsano asi 14px, ale podle obrazku je to 18 */
+	color: #4d4d4d;
+	margin-left: 0;
+	margin-bottom: 40px;
+}
+
+#references .ref-author {
+	color: #bfbfbf;
+	font-size: 14px;
+	padding-right: 100px;
+}
+
+
+
+/* steps */
+#steps {
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+#steps .content {
+	column-count: 3;
+}
+
+#steps .steps-item i  {
+	font-size: 60px;
+	color: lightsteelblue;
+	float: left;
+	padding-right: 25px;
+	margin-top: 0;
+}
+
+#steps .steps-item h3 {
+	font-family: Montserrat;
+	padding-top: 12px;
+	text-transform: uppercase;
+	color: #4d4d4d;
+	font-size: 14px;
+	margin-top: 0;
+}
+
+#steps .steps-item p {
+	text-align: left;
+	padding-right: 50px;
+	padding-left: 95px;
+}
+
+#steps .steps-more {
+	font-family: Montserrat;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 11px;
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 95px;
+}
+
+
+
+/* contact */
+#contact {
+	padding-top: 40px;
+	padding-bottom: 100px;
+	background-color: #262626;
+}
+
+#contact .content {
+	column-count: 3;
+	height: auto;
+}
+
+#contact .contact-item {
+	height: 230px;
+}
+
+#contact h3 {
+	margin-top: 0;
+	font-family: Montserrat;
+	font-weight: 100;
+	font-size: 24px;
+	color: white;
+}
+
+#contact ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#contact li {
+	font-family: Montserrat;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+}
+
+#contact li a:hover {
+	color: white;
+}
+
+#contact #email-form {
+	height: 50px; /* celkova vyska je 54, 2 pixely nahore i dole dela border */
+	width: 95%;
+	border-radius: 4px;
+	border: 2px solid #898989;
+	padding: 0;
+	margin: 0;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 0 5px;
+}
+
+#contact input:invalid {
+	color: red;
+}
+
+#contact #submit-btn {
+	background-color: steelblue;
+	color: white;
+	border-radius: 4px;
+	border: 0;
+	font-size: 14px;
+	font-family: Montserrat;
+	font-weight: 550;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	height: 54px;
+	width: 70px;
+	margin-top: 5px;
+}
+
+
+/* footer note */
+#footer-note {
+	padding: 20px 0;
+	background-color: #1a1a1a;
+	font-size: 12px;
+}
